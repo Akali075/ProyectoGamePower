@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página Principal</title>
+    <!-- Rutas locales CSS de Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="scss/custom.css" />
+</head>
+
+<body class="gradient-bg text-white">
+    <!-- Navbar estilos de bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html">GamePower</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="tarifas.html">Tarifas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="eventos.html">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Servicios
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="reparaciones.html">Reparaciones</a></li>
+                            <li><a class="dropdown-item" href="socios.html">Socios</a></li>
+                            <li>
+                                <a class="dropdown-item" href="montajes.html">Montajes Personalizados</a>
+                            </li>
+                        </ul>
+                    </div>
+                </ul>
+                <form class="d-flex ms-3">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
+                    <button class="btn btn-outline-light" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carrusel estilos de bootstrap-->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+                <img src="/images/Foto1Carousel.jpg" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>GAMEPOWER</h5>
+                    <p>Donde el juego siempre comienza y nunca termina.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="6000">
+                <img src="/images/Foto2Carousel.jpg" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="9000">
+                <img src="/images/Foto3Carousel.jpg" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-none d-sm-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- Línea separadora entre carrusel y servicios -->
+    <div class="section-line"></div>
+
+    <!-- Sección de Servicios / estilos de bootstrap -->
+    <div class="container text-center py-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="circle"></div>
+                <h5 class="mt-3">Reparaciones</h5>
+                <p>Descripción</p>
+            </div>
+            <div class="col-md-4">
+                <div class="circle"></div>
+                <h5 class="mt-3">Socios</h5>
+                <p>Descripción</p>
+            </div>
+            <div class="col-md-4">
+                <div class="circle"></div>
+                <h5 class="mt-3">Montaje PC</h5>
+                <p>Descripción</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Línea separadora entre Servicios y Mapa -->
+    <div class="section-line"></div>
+
+    <!--Contacto y Mapa del Sitio / estilos de bootstrap-->
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>¿Dónde estamos?</h1>
+                <h2>Dirección:</h2>
+                <p>C. las Bocas, 6, 21001 Huelva</p>
+                <h2>Contacto:</h2>
+                <p>GamePower@gmail.com</p>
+                <p>+34 666 55 44 33</p>
+            </div>
+            <div class="col-md-6">
+                <div class="bg-light text-dark text-center p-5">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3175.6203153381643!2d-6.956130988930262!3d37.25671497200422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd11d02f7b3ec9d1%3A0xa1e9b1b7601bd6df!2sC.%20las%20Bocas%2C%206%2C%2021001%20Huelva!5e0!3m2!1ses!2ses!4v1732735482829!5m2!1ses!2ses"
+                        width="450" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rutas locales JS de Bootstrap -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+<!-- Footer estilos de bootstrap -->
+<footer class="footer py-3 bg-dark text-light">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Legal</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#" class="text-light text-decoration-none">Términos y Condiciones</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-light text-decoration-none">Política de Privacidad</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-light text-decoration-none">Aviso Legal</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Enlaces</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="/about" class="text-light text-decoration-none">Sobre Nosotros</a>
+                    </li>
+                    <li>
+                        <a href="/services" class="text-light text-decoration-none">Servicios</a>
+                    </li>
+                    <li>
+                        <a href="/contact" class="text-light text-decoration-none">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Redes Sociales</h5>
+                <a href="https://facebook.com" class="text-light text-decoration-none me-2">
+                    <i class="bi bi-facebook"></i> Facebook
+                </a>
+                <a href="https://instagram.com" class="text-light text-decoration-none me-2">
+                    <i class="bi bi-instagram"></i> Instagram
+                </a>
+                <a href="https://twitter.com" class="text-light text-decoration-none">
+                    <i class="bi bi-twitter"></i> Twitter
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>

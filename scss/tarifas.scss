@@ -1,0 +1,159 @@
+@use "sass:color";
+
+/* Variables */
+$primary-color: #d332e4;
+$secondary-color: #3f2b96;
+$light-blue: #a8c0ff;
+$light-gray: #e8e8e8;
+$reserva-bg: url("/images/reservas.jpg");
+
+.gradient-bg {
+    background: linear-gradient(to bottom, $primary-color, $secondary-color, $light-blue);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #fff; 
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+  }
+  
+/* Estilos NavBar */
+.navbar {
+  background-color: rgba(52, 58, 64, 0.375);
+  padding: 1rem;
+
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+
+    &:hover {
+      color: $light-blue;
+    }
+  }
+
+  .nav-link {
+    color: color.scale($light-gray, $lightness: 10%);
+    margin: 0 0.5rem;
+
+    &:hover {
+      color: #fff;
+    }
+
+    &.active {
+      color: $light-blue;
+      font-weight: bold;
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+
+    .navbar-toggler-icon {
+      filter: invert(1);
+    }
+  }
+
+  .form-control {
+    border-radius: 20px;
+    border: 1px solid $light-gray;
+
+    &:focus {
+      border-color: $light-blue;
+      box-shadow: 0 0 5px rgba(168, 192, 255, 0.5);
+    }
+  }
+
+  .btn-outline-light {
+    border-radius: 20px;
+    &:hover {
+      background-color: $light-blue;
+      color: #fff;
+    }
+  }
+}
+
+.reserva-container {
+  padding: 20px;
+}
+
+.reserva-box {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 400px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+
+  h2 {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+
+  .form-control {
+    background-color: #333;
+    border: none;
+    color: #fff;
+
+    &::placeholder {
+      color: #bbb;
+    }
+  }
+
+  .btn-primary {
+    background-color: #0066ff;
+    border: none;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #0056e0;
+    }
+  }
+}
+
+/* Pie de página */
+.footer {
+  background-color: $secondary-color;
+  color: #f8f9fa;
+  padding: 1.5rem 0;
+
+  h5 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: color.scale($primary-color, $lightness: 20%);
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 0.5rem;
+
+      a {
+        text-decoration: none;
+        color: #f8f9fa;
+        transition: color 0.3s;
+
+        &:hover {
+          color: color.scale($light-blue, $lightness: -10%);
+        }
+      }
+    }
+  }
+
+  a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: #f8f9fa;
+    margin-right: 1rem;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $light-blue;
+    }
+  }
+
+  .bi {
+    margin-right: 0.5rem;
+  }
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarifas</title>
+    <!-- Rutas locales CSS de Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="scss/tarifas.css">
+</head>
+
+<body class="gradient-bg text-white">
+    <!-- Navbar estilos de bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html">GamePower</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="tarifas.html">Tarifas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="eventos.html">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Servicios
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Reparaciones</a></li>
+                            <li><a class="dropdown-item" href="#">Socios</a></li>
+                            <li>
+                                <a class="dropdown-item" href="#">Montajes Personalizados</a>
+                            </li>
+                        </ul>
+                    </div>
+                </ul>
+                <form class="d-flex ms-3">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
+                    <button class="btn btn-outline-light" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tabs -->
+  <div class="container my-4">
+    <ul class="nav nav-pills justify-content-center">
+      <li class="nav-item"><a class="nav-link active" href="#">PC</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Consolas</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Streaming</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">V.I.P</a></li>
+    </ul>
+  </div>
+
+  <!-- Content Sections -->
+  <div class="container text-center">
+    <a class="btn btn-primary" href="reservas.html" role="button">Reservas</a>
+    <button class="btn btn-primary" type="submit">Button</button>
+    <!-- PC Section -->
+    <div class="row mb-4">
+      <h3>PC Sala Principal:</h3>
+      <div class="col-md-6 mx-auto content-box"></div>
+      <table class="table table-light table-striped text-dark mt-3">
+        <thead>
+          <tr>
+            <th>Horas</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>€5</td></tr>
+          <tr><td>2</td><td>€9</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Consolas Section -->
+    <div class="row mb-4">
+      <h3>Consolas:</h3>
+      <div class="col-md-6 mx-auto content-box"></div>
+      <table class="table table-light table-striped text-dark mt-3">
+        <thead>
+          <tr>
+            <th>Horas</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>€7</td></tr>
+          <tr><td>2</td><td>€13</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Streaming Section -->
+    <div class="row mb-4">
+      <h3>Zona Streaming:</h3>
+      <div class="col-md-6 mx-auto content-box"></div>
+      <table class="table table-light table-striped text-dark mt-3">
+        <thead>
+          <tr>
+            <th>Horas</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>€10</td></tr>
+          <tr><td>2</td><td>€18</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- VIP Section -->
+    <div class="row mb-4">
+      <h3>V.I.P:</h3>
+      <div class="col-md-6 mx-auto content-box"></div>
+      <table class="table table-light table-striped text-dark mt-3">
+        <thead>
+          <tr>
+            <th>Horas</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>€20</td></tr>
+          <tr><td>2</td><td>€35</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+<!-- 
+    <div class="container-fluid reserva-container d-flex align-items-center justify-content-center">
+        <div class="reserva-box text-center">
+            <h2 class="mb-4">Reserva tu próxima sesión de juego</h2>
+            <form>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Nombre" required>
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Apellidos" required>
+                </div>
+                <div class="mb-3">
+                    <input type="tel" class="form-control" placeholder="Teléfono" required>
+                </div>
+                <div class="mb-3">
+                    <input type="date" class="form-control" placeholder="Fecha y hora de inicio" required>
+                </div>
+                <div class="mb-3">
+                    <select class="form-control" required>
+                        <option value="">Selecciona la duración</option>
+                        <option value="1">1 hora</option>
+                        <option value="2">2 horas</option>
+                        <option value="3">3 horas</option>
+                        <option value="4">4 horas</option>
+                        <option value="5">5 horas</option>
+                        <option value="6">6 horas</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Reservar</button>
+            </form>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Sala Principal</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+
+          <tr>
+            <th scope="row">Horas</th>
+            <td>1 Hora</td>
+            <td>2 Horas</td>
+            <td>3 Horas</td>
+          </tr>
+          <tr>
+            <th scope="row">Precios</th>
+            <td colspan="2">3€</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table> -->
+</body>
+<!-- Footer estilos de bootstrap -->
+<footer class="footer py-3 bg-dark text-light">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Legal</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#" class="text-light text-decoration-none">Términos y Condiciones</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-light text-decoration-none">Política de Privacidad</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-light text-decoration-none">Aviso Legal</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Enlaces</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="/about" class="text-light text-decoration-none">Sobre Nosotros</a>
+                    </li>
+                    <li>
+                        <a href="/services" class="text-light text-decoration-none">Servicios</a>
+                    </li>
+                    <li>
+                        <a href="/contact" class="text-light text-decoration-none">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Redes Sociales</h5>
+                <a href="https://facebook.com" class="text-light text-decoration-none me-2">
+                    <i class="bi bi-facebook"></i> Facebook
+                </a>
+                <a href="https://instagram.com" class="text-light text-decoration-none me-2">
+                    <i class="bi bi-instagram"></i> Instagram
+                </a>
+                <a href="https://twitter.com" class="text-light text-decoration-none">
+                    <i class="bi bi-twitter"></i> Twitter
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>

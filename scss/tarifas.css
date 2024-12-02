@@ -1,0 +1,131 @@
+@charset "UTF-8";
+/* Variables */
+.gradient-bg {
+  background: linear-gradient(to bottom, #d332e4, #3f2b96, #a8c0ff);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+}
+
+/* Estilos NavBar */
+.navbar {
+  background-color: rgba(52, 58, 64, 0.375);
+  padding: 1rem;
+}
+.navbar .navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+.navbar .navbar-brand:hover {
+  color: #a8c0ff;
+}
+.navbar .nav-link {
+  color: rgb(234.3, 234.3, 234.3);
+  margin: 0 0.5rem;
+}
+.navbar .nav-link:hover {
+  color: #fff;
+}
+.navbar .nav-link.active {
+  color: #a8c0ff;
+  font-weight: bold;
+}
+.navbar .navbar-toggler {
+  border: none;
+}
+.navbar .navbar-toggler .navbar-toggler-icon {
+  filter: invert(1);
+}
+.navbar .form-control {
+  border-radius: 20px;
+  border: 1px solid #e8e8e8;
+}
+.navbar .form-control:focus {
+  border-color: #a8c0ff;
+  box-shadow: 0 0 5px rgba(168, 192, 255, 0.5);
+}
+.navbar .btn-outline-light {
+  border-radius: 20px;
+}
+.navbar .btn-outline-light:hover {
+  background-color: #a8c0ff;
+  color: #fff;
+}
+
+.reserva-container {
+  padding: 20px;
+}
+
+.reserva-box {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 400px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+.reserva-box h2 {
+  font-size: 1.5rem;
+  color: #fff;
+}
+.reserva-box .form-control {
+  background-color: #333;
+  border: none;
+  color: #fff;
+}
+.reserva-box .form-control::placeholder {
+  color: #bbb;
+}
+.reserva-box .btn-primary {
+  background-color: #0066ff;
+  border: none;
+  transition: background-color 0.3s;
+}
+.reserva-box .btn-primary:hover {
+  background-color: #0056e0;
+}
+
+/* Pie de página */
+.footer {
+  background-color: #3f2b96;
+  color: #f8f9fa;
+  padding: 1.5rem 0;
+}
+.footer h5 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: rgb(219.8, 91, 233.4);
+}
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+.footer ul li {
+  margin-bottom: 0.5rem;
+}
+.footer ul li a {
+  text-decoration: none;
+  color: #f8f9fa;
+  transition: color 0.3s;
+}
+.footer ul li a:hover {
+  color: rgb(125.7, 161.3689655172, 255);
+}
+.footer a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #f8f9fa;
+  margin-right: 1rem;
+  transition: color 0.3s;
+}
+.footer a:hover {
+  color: #a8c0ff;
+}
+.footer .bi {
+  margin-right: 0.5rem;
+}
+
+/*# sourceMappingURL=tarifas.css.map */
