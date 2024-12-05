@@ -9,46 +9,50 @@
     <link rel="stylesheet" href="/scss/reservas.css">
 </head>
 <header>
-        <!-- Navbar estilos de bootstrap -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/index.html">GamePower</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="tarifas.html">Tarifas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="eventos.html">Eventos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="blog.html">Blog</a>
-                        </li>
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Servicios
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="">Reparaciones</a></li>
-                                <li><a class="dropdown-item" href="">Socios</a></li>
-                                <li>
-                                    <a class="dropdown-item" href="">Montajes Personalizados</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </ul>
-                    <form class="d-flex ms-3">
-                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
-                        <button class="btn btn-outline-light" type="submit">Buscar</button>
-                    </form>
-                </div>
+    <!-- Navbar estilos de bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a href="/index.html">
+                <img src="/images/GamePower.png" alt="Logo GamePower" class="navbar-logo">
+            </a>
+            <a class="navbar-brand" href="/index.html">GamePower</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="tarifas.html">Tarifas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="eventos.html">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Noticias</a>
+                    </li>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Servicios
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="views/">Reparaciones</a></li>
+                            <li><a class="dropdown-item" href="views/">Socios</a></li>
+                            <li>
+                                <a class="dropdown-item" href="views/">Montajes Personalizados</a>
+                            </li>
+                        </ul>
+                    </div>
+                </ul>
+                <form class="d-flex ms-3">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
+                    <button class="btn btn-outline-light" type="submit">Buscar</button>
+                </form>
             </div>
-        </nav>
+        </div>
+    </nav>
 </header>
+
 <body class="gradient-bg text-white">
     <div class="reservation-section">
         <div class="reservation-form">
@@ -76,6 +80,7 @@
         </div>
     </div>
     <script src="js/scriptreservas.js"></script>
+
 </body>
 <footer class="footer py-3 bg-dark text-light">
     <div class="container text-center">
@@ -123,5 +128,7 @@
         </div>
     </div>
 </footer>
+<!-- Rutas locales JS de Bootstrap -->
+<script src="js/bootstrap.bundle.min.js"></script>
 
 </html>

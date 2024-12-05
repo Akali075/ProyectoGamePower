@@ -8,19 +8,29 @@ $light-gray: #e8e8e8;
 $reserva-bg: url("/images/reservas.jpg");
 
 .gradient-bg {
-    background: linear-gradient(to bottom, $primary-color, $secondary-color, $light-blue);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    color: #fff; 
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-  }
-  
+  background: linear-gradient(
+    to bottom,
+    $primary-color,
+    $secondary-color,
+    $light-blue
+  );
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+}
+
 /* Estilos NavBar */
 .navbar {
   background-color: rgba(52, 58, 64, 0.375);
   padding: 1rem;
+  .navbar-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+  }
 
   .navbar-brand {
     font-size: 1.5rem;

@@ -22,13 +22,19 @@ $light-gray: #e8e8e8;
   background-color: rgba(52, 58, 64, 0.375);
   padding: 1rem;
 
+  .navbar-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+  }  
+
   .navbar-brand {
     font-size: 1.5rem;
     font-weight: bold;
     color: #fff;
 
     &:hover {
-      color: $light-blue; 
+      color: $light-blue;
     }
   }
 
@@ -37,12 +43,12 @@ $light-gray: #e8e8e8;
     margin: 0 0.5rem;
 
     &:hover {
-      color: #fff; 
+      color: #fff;
     }
 
     &.active {
       color: $light-blue;
-      font-weight: bold; 
+      font-weight: bold;
     }
   }
 
@@ -66,12 +72,14 @@ $light-gray: #e8e8e8;
 
   .btn-outline-light {
     border-radius: 20px;
+
     &:hover {
       background-color: $light-blue;
       color: #fff;
     }
   }
 }
+
 
 /* Pie de página */
 .footer {

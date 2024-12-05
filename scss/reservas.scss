@@ -27,6 +27,11 @@ $light-gray: #e8e8e8;
   background-color: rgba(52, 58, 64, 0.375);
   padding: 1rem;
 
+  .navbar-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+  } 
   .navbar-brand {
     font-size: 1.5rem;
     font-weight: bold;

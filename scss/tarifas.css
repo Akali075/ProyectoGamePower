@@ -15,6 +15,11 @@
   background-color: rgba(52, 58, 64, 0.375);
   padding: 1rem;
 }
+.navbar .navbar-logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
 .navbar .navbar-brand {
   font-size: 1.5rem;
   font-weight: bold;
