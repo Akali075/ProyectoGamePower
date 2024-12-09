@@ -1,136 +1,109 @@
-@charset "UTF-8";
-/* Variables */
-.gradient-bg {
-  background: linear-gradient(to bottom, #d332e4, #3f2b96, #a8c0ff);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  color: #fff;
-  font-family: "Arial", sans-serif;
-  margin: 0;
-}
-
-/* Estilos NavBar */
-.navbar {
-  background-color: rgba(52, 58, 64, 0.375);
-  padding: 1rem;
-}
-.navbar .navbar-logo {
-  width: 50px;
-  height: 50px;
-  margin-right: 20px;
-}
-.navbar .navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #fff;
-}
-.navbar .navbar-brand:hover {
-  color: #a8c0ff;
-}
-.navbar .nav-link {
-  color: rgb(234.3, 234.3, 234.3);
-  margin: 0 0.5rem;
-}
-.navbar .nav-link:hover {
-  color: #fff;
-}
-.navbar .nav-link.active {
-  color: #a8c0ff;
-  font-weight: bold;
-}
-.navbar .navbar-toggler {
-  border: none;
-}
-.navbar .navbar-toggler .navbar-toggler-icon {
-  filter: invert(1);
-}
-.navbar .form-control {
-  border-radius: 20px;
-  border: 1px solid #e8e8e8;
-}
-.navbar .form-control:focus {
-  border-color: #a8c0ff;
-  box-shadow: 0 0 5px rgba(168, 192, 255, 0.5);
-}
-.navbar .btn-outline-light {
-  border-radius: 20px;
-}
-.navbar .btn-outline-light:hover {
-  background-color: #a8c0ff;
-  color: #fff;
-}
-
 .reserva-container {
   padding: 20px;
+  background-image: url("/images/reservasblur.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  position: relative;
+}
+
+.nav-tabs {
+  border-bottom: none;
+  gap: 2px;
+}
+.nav-tabs .nav-item .nav-link {
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.nav-tabs .nav-item .nav-link:hover {
+  color: #fff;
+  background-color: rgba(151, 71, 255, 0.5);
+  border-color: transparent;
+}
+.nav-tabs .nav-item .nav-link.active {
+  color: #fff;
+  background-color: #9747ff;
+  border-color: transparent;
 }
 
 .reserva-box {
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(26, 27, 38, 0.75);
   padding: 30px;
   border-radius: 15px;
-  max-width: 400px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: #fff;
+  max-width: 500px;
+  width: 100%;
+  margin-top: -30px;
 }
 .reserva-box h2 {
   font-size: 1.5rem;
-  color: #fff;
-}
-.reserva-box .form-control {
-  background-color: #333;
-  border: none;
-  color: #fff;
-}
-.reserva-box .form-control::placeholder {
-  color: #bbb;
+  margin-bottom: 20px;
+  color: #9747ff;
 }
 .reserva-box .btn-primary {
-  background-color: #0066ff;
+  background-color: #00b4d8;
   border: none;
-  transition: background-color 0.3s;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: all 0.3s ease;
 }
 .reserva-box .btn-primary:hover {
-  background-color: #0056e0;
+  background-color: #008aa5;
+  transform: scale(1.05);
 }
 
-/* Pie de página */
-.footer {
-  background-color: #3f2b96;
-  color: #f8f9fa;
-  padding: 1.5rem 0;
+.table {
+  background-color: rgba(26, 27, 38, 0.75);
+  color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
 }
-.footer h5 {
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-  color: rgb(219.8, 91, 233.4);
+.table th, .table td {
+  padding: 12px 15px;
+  border-color: rgba(255, 255, 255, 0.1);
 }
-.footer ul {
-  list-style: none;
-  padding: 0;
-}
-.footer ul li {
-  margin-bottom: 0.5rem;
-}
-.footer ul li a {
-  text-decoration: none;
-  color: #f8f9fa;
-  transition: color 0.3s;
-}
-.footer ul li a:hover {
-  color: rgb(125.7, 161.3689655172, 255);
-}
-.footer a {
-  font-size: 1rem;
-  text-decoration: none;
-  color: #f8f9fa;
-  margin-right: 1rem;
-  transition: color 0.3s;
-}
-.footer a:hover {
-  color: #a8c0ff;
-}
-.footer .bi {
-  margin-right: 0.5rem;
+.table th {
+  background-color: rgba(151, 71, 255, 0.2);
+  font-weight: 600;
 }
 
-/*# sourceMappingURL=tarifas.css.map */
+@media (max-width: 768px) {
+  .reserva-container {
+    height: 200px;
+    padding: 10px;
+  }
+  .reserva-box {
+    padding: 20px;
+    max-width: 100%;
+  }
+  .reserva-box h2 {
+    font-size: 1.2rem;
+  }
+  .reserva-box .btn-primary {
+    padding: 8px 15px;
+    font-size: 1rem;
+  }
+  .nav-tabs .nav-link {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+  .table th, .table td {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=tarifas.css.map */

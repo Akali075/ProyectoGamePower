@@ -1,0 +1,200 @@
+@use "sass:color";
+
+/* Variables */
+$primary-color: #9747ff; // Púrpura vibrante
+$secondary-color: #2d3192; // Azul profundo
+$accent-color: #00b4d8; // Azul cian brillante
+$neutral: #1a1b26; // Gris oscuro
+
+/* Fondo De La Pagina */
+.gradient-bg {
+  background: linear-gradient(
+    to bottom,
+    $primary-color,
+    $secondary-color,
+    $accent-color
+  );
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 1rem;
+
+  @include respond-to(sm) {
+    padding: 2rem;
+  }
+}
+
+/* Estilos NavBar */
+.navbar {
+  background-color: rgba(42, 49, 146, 0.375);
+  padding: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+
+  .navbar-content {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+
+    @include respond-to(sm) {
+      padding: 0 2rem;
+    }
+  }
+
+  .navbar-logo,
+  .navbar-brand,
+  .nav-link {
+    flex-shrink: 0;
+  }
+
+  .navbar-logo {
+    width: 50px;
+    height: 50px;
+
+    @include respond-to(sm) {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+    margin: 0 auto;
+
+    &:hover {
+      color: $accent-color;
+    }
+
+    .logo-text {
+      margin-left: 10px;
+    }
+
+    @include respond-to(sm) {
+      font-size: 1.75rem;
+    }
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #fff;
+    transition: border-bottom 0.3s, color 0.3s;
+
+    &:hover {
+      border-bottom: 2px solid $accent-color;
+    }
+
+    &.active {
+      border-bottom: 2px solid $accent-color;
+    }
+
+    @include respond-to(sm) {
+      font-size: 1.2rem;
+      margin: 0 1.5rem;
+    }
+  }
+
+  .navbar-toggler {
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    outline: none;
+
+    @include respond-to(sm) {
+      font-size: 1.75rem;
+    }
+  }
+
+  .navbar-toggler-icon {
+    filter: invert(1);
+  }
+}
+
+/* Pie de página */
+.footer {
+  background-color: $secondary-color;
+  color: #f8f9fa;
+  padding: 1.5rem 1rem;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  h5 {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+    color: color.scale($primary-color, $lightness: 20%);
+
+    @include respond-to(sm) {
+      font-size: 1.5rem;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+
+    li {
+      margin-bottom: 0.5rem;
+
+      a {
+        text-decoration: none;
+        color: color.scale($accent-color, $lightness: -15%);
+        transition: color 0.3s;
+        font-size: 1rem;
+
+        &:hover {
+          color: color.scale($accent-color, $lightness: 10%);
+        }
+      }
+    }
+  }
+
+  @include respond-to(sm) {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* Media Queries */
+@mixin respond-to($size) {
+  @if $size == xs {
+    @media (max-width: 575px) {
+      @content;
+    }
+  } @else if $size == sm {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $size == md {
+    @media (max-width: 991px) {
+      @content;
+    }
+  } @else if $size == lg {
+    @media (max-width: 1199px) {
+      @content;
+    }
+  } @else if $size == xl {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
