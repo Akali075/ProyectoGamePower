@@ -9,53 +9,56 @@
     <link rel="stylesheet" href="/scss/multiple.css" />
     <link rel="stylesheet" href="/scss/productos.css">
 </head>
-<header>
-    <!-- Navbar estilos de bootstrap -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a href="/index.html">
-                <img src="/images/GamePower.png" alt="Logo GamePower" class="navbar-logo">
-            </a>
-            <a class="navbar-brand" href="/index.html">GamePower</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="tarifas.html">Tarifas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="eventos.html">Eventos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="noticias.html">Noticias</a>
-                    </li>
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Servicios
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="">Reparaciones</a></li>
-                            <li><a class="dropdown-item" href="">Socios</a></li>
-                            <li>
-                                <a class="dropdown-item" href="">Montajes Personalizados</a>
-                            </li>
-                        </ul>
-                    </div>
-                </ul>
-                <form class="d-flex ms-3">
-                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
-                    <button class="btn btn-outline-light" type="submit">Buscar</button>
-                </form>
-            </div>
-        </div>
-    </nav>
-</header>
 
 <body class="gradient-bg text-white">
+    <header role="banner">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation" aria-label="Navegación principal">
+            <div class="container-fluid">
+                <a href="/index.html" aria-label="Inicio - GamePower">
+                    <img src="/images/GamePower.png" alt="Logo GamePower" class="navbar-logo" width="50" height="50">
+                </a>
+                <a class="navbar-brand" href="/index.html">GamePower</a>
 
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="tarifas.html" aria-current="page">Tarifas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="eventos.html">Eventos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="noticias.html">Noticias</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="serviciosDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                                Servicios
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="serviciosDropdown">
+                                <li><a class="dropdown-item" href="Servicios/reparaciones.html">Reparaciones</a></li>
+                                <li><a class="dropdown-item" href="Servicios/socios.html">Socios</a></li>
+                                <li><a class="dropdown-item" href="Servicios/montajes.html">Montajes Personalizados</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <form class="d-flex ms-3" role="search" aria-label="Búsqueda en el sitio">
+                        <label for="search-input" class="visually-hidden">Buscar en el sitio</label>
+                        <input id="search-input" class="form-control me-2" type="search" placeholder="Buscar"
+                            aria-label="Campo de búsqueda" />
+                        <button class="btn btn-outline-light" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
     <main>
         <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
             <div class="col-md-6 p-lg-5 mx-auto my-5">
@@ -117,7 +120,54 @@
                     style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div>
             </div>
         </div>
-
+        <!-- Footer estilos de bootstrap -->
+        <footer class="footer py-3 bg-dark text-light" role="contentinfo">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3>Legal</h3>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="/legal/terminos" class="text-light">Términos y Condiciones</a>
+                            </li>
+                            <li>
+                                <a href="/legal/privacidad" class="text-light">Política de Privacidad</a>
+                            </li>
+                            <li>
+                                <a href="/legal/aviso" class="text-light">Aviso Legal</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Enlaces</h3>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="/about" class="text-light text-decoration-none">Sobre Nosotros</a>
+                            </li>
+                            <li>
+                                <a href="/services" class="text-light text-decoration-none">Servicios</a>
+                            </li>
+                            <li>
+                                <a href="/contact" class="text-light text-decoration-none">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Redes Sociales</h3>
+                        <ul class="list-unstyled">
+                            <a href="https://facebook.com" class="text-light text-decoration-none me-2">
+                                <i class="bi bi-facebook"></i> Facebook
+                            </a>
+                            <a href="https://instagram.com" class="text-light text-decoration-none me-2">
+                                <i class="bi bi-instagram"></i> Instagram
+                            </a>
+                            <a href="https://twitter.com" class="text-light text-decoration-none">
+                                <i class="bi bi-twitter"></i> Twitter
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
 </body>
 <!-- Rutas locales JS de Bootstrap -->
 <script src="/js/bootstrap.bundle.min.js"></script>
