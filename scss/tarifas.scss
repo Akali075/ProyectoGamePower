@@ -1,147 +1,113 @@
-// Custom Variables
-$primary: #9747ff; // Púrpura vibrante
-$secondary: #2d3192; // Azul profundo
-$info: #00b4d8; // Azul cian brillante
-$dark: #1a1b26; // Gris oscuro
+/* Variables */
+$reserva-bg-color: #9747ff;
+$reserva-text-color: #2d3192;
+$tabs-bg-color: #00b4d8;
+$tabs-text-color: #1a1b26;
+$section-title-color: #45d3b4;
 
-// Bootstrap Variable Overrides
-$body-bg: $dark;
-$body-color: #fff;
+/* Main */
+main {
+  padding: 2rem;
 
-// Custom Variables for Components
-$nav-tabs-link-active-color: #fff;
-$nav-tabs-link-active-bg: $primary;
-$nav-tabs-border-color: transparent;
-$nav-tabs-link-hover-border-color: transparent;
-
-// Custom SCSS for the Reservation Section
-.reserva-container {
-  padding: 20px;
-  background-image: url("/images/reservasblur.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 250px;
-  position: relative;
-}
-
-// Nav Tabs Custom Styling
-.nav-tabs {
-  border-bottom: none;
-  gap: 2px;
-
-  .nav-item {
-    .nav-link {
-      color: rgba(255, 255, 255, 0.7);
-      background-color: rgba(255, 255, 255, 0.1);
-      border: none;
-      border-radius: 4px;
-      padding: 8px 16px;
-      font-size: 14px;
-      transition: all 0.3s ease;
-
-      &:hover {
-        color: #fff;
-        background-color: rgba($primary, 0.5);
-        border-color: transparent;
-      }
-
-      &.active {
-        color: #fff;
-        background-color: $primary;
-        border-color: transparent;
-      }
-    }
-  }
-}
-
-// Reservation Box Styling
-.reserva-box {
-  background-color: rgba($dark, 0.75);
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  text-align: center;
-  color: #fff;
-  max-width: 500px;
-  width: 100%;
-  margin-top: -30px;
-
-  h2 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: $primary;
-  }
-
-  .btn-primary {
-    background-color: $info;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-
-    &:hover {
-      background-color: darken($info, 10%);
-      transform: scale(1.05);
-    }
-  }
-}
-
-// Table Styling
-.table {
-  background-color: rgba($dark, 0.75);
-  color: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-
-  th, td {
-    padding: 12px 15px;
-    border-color: rgba(255, 255, 255, 0.1);
-  }
-
-  th {
-    background-color: rgba($primary, 0.2);
-    font-weight: 600;
-  }
-}
-
-// Responsive Adjustments
-@media (max-width: 768px) {
   .reserva-container {
-    height: 200px;
-    padding: 10px;
-  }
-
-  .reserva-box {
-    padding: 20px;
-    max-width: 100%;
+    background-color: $reserva-bg-color;
+    color: $reserva-text-color;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
 
     h2 {
-      font-size: 1.2rem;
+      font-size: 2rem;
+      margin-bottom: 1rem;
     }
 
-    .btn-primary {
-      padding: 8px 15px;
-      font-size: 1rem;
+    .reserva-btn {
+      background-color: darken($reserva-bg-color, 10%);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: darken($reserva-bg-color, 15%);
+      }
     }
   }
 
-  .nav-tabs .nav-link {
-    padding: 6px 12px;
-    font-size: 13px;
-  }
+  .container {
+    margin-top: 2rem;
 
-  .table {
-    th, td {
-      padding: 8px 12px;
-      font-size: 14px;
+    .nav-tabs {
+      background-color: $tabs-bg-color;
+      padding: 0.5rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+
+      .nav-link {
+        color: $tabs-text-color;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+
+        &.active {
+          background-color: lighten($tabs-bg-color, 10%);
+          color: #fff;
+        }
+
+        &:hover {
+          background-color: lighten($tabs-bg-color, 5%);
+        }
+      }
+    }
+
+    .tab-content {
+      .tab-pane {
+        padding: 1rem;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        h3 {
+          color: $section-title-color;
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+        }
+
+        .row {
+          align-items: center;
+
+          .col-md-6 {
+            img {
+              width: 100%;
+              border-radius: 8px;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .table {
+              margin-top: 1rem;
+              background-color: #f8f9fa;
+              border-radius: 8px;
+
+              thead {
+                background-color: $tabs-bg-color;
+                color: #fff;
+              }
+
+              tbody {
+                tr {
+                  color: $tabs-text-color;
+                  &:nth-child(even) {
+                    background-color: lighten($tabs-bg-color, 10%);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

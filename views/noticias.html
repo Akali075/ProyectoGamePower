@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- Rutas locales CSS de Bootstrap -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/scss/multiple.css" />
+    <link rel="stylesheet" href="/scss/noticias.css">
+</head>
+<header>
+    <!-- Navbar estilos de bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a href="/index.html">
+                <img src="/images/GamePower.png" alt="Logo GamePower" class="navbar-logo">
+            </a>            
+            <a class="navbar-brand" href="/index.html">GamePower</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="tarifas.html">Tarifas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="eventos.html">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="noticias.html">Noticias</a>
+                    </li>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Servicios
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="">Reparaciones</a></li>
+                            <li><a class="dropdown-item" href="">Socios</a></li>
+                            <li>
+                                <a class="dropdown-item" href="">Montajes Personalizados</a>
+                            </li>
+                        </ul>
+                    </div>
+                </ul>
+                <form class="d-flex ms-3">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
+                    <button class="btn btn-outline-light" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body class="gradient-bg text-white">
+    <main class="container my-4">
+        <!-- Sección de Noticias Destacadas -->
+        <section>
+            <h2 class="text-center my-4 fw-bold">Últimas Noticias</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="/images/XYZ.jpg" class="card-img-top" alt="Nuevo lanzamiento de videojuego">
+                        <div class="card-body">
+                            <h5 class="card-title">Lanzamiento de "Game XYZ"</h5>
+                            <p class="card-text">Descubre las características y novedades del nuevo videojuego que está arrasando en las críticas.                    </p>
+                            <p class="text-muted">Fecha: 12 de Diciembre</p>
+                            <button class="btn btn-outline-primary" onclick="mostrarAlerta()">Leer más</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="/images/revision.jpg" class="card-img-top" alt="Revisión de ordenador gaming">
+                        <div class="card-body">
+                            <h5 class="card-title">Revisión de Ordenador Gaming 2024</h5>
+                            <p class="card-text">Analizamos el mejor equipo para gaming del año, con un rendimiento excepcional y características de última generación.</p>
+                            <p class="text-muted">Fecha: 10 de Diciembre</p>
+                            <button class="btn btn-outline-primary" onclick="mostrarAlerta()">Leer más</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="/images/eSports.jpg" class="card-img-top" alt="Evento de E-Sports">
+                        <div class="card-body">
+                            <h5 class="card-title">Evento de E-Sports de Invierno</h5>
+                            <p class="card-text">Todo lo que necesitas saber sobre el próximo torneo de e-sports, con participación de equipos profesionales y grandes premios.</p>
+                            <p class="text-muted">Fecha: 22 de Diciembre</p>
+                            <button class="btn btn-outline-primary" onclick="mostrarAlerta()">Leer más</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Listado de Artículos -->
+        <section class="my-5">
+            <h2 class="text-center fw-bold">Artículos Recientes</h2>
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <div class="card shadow-sm mb-4">
+                        <img src="/images/Novedades.jpg" class="card-img-top" alt="Artículo sobre tendencias en hardware">
+                        <div class="card-body">
+                            <h5 class="card-title">Tendencias en Hardware para 2024</h5>
+                            <p class="card-text">Explora las nuevas tecnologías y avances en componentes de PC que marcarán el futuro del gaming.</p>
+                            <p class="text-muted">Fecha: 8 de Diciembre</p>
+                            <button class="btn btn-outline-primary" onclick="mostrarAlerta()">Leer más</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card shadow-sm mb-4">
+                        <img src="/images/RTX.jpeg" class="card-img-top" alt="Análisis de la tarjeta gráfica RTX 4090">
+                        <div class="card-body">
+                            <h5 class="card-title">Análisis de la Tarjeta Gráfica RTX 4090</h5>
+                            <p class="card-text">Descubre si vale la pena invertir en la última GPU de Nvidia y cómo afecta el rendimiento en juegos exigentes.</p>
+                            <p class="text-muted">Fecha: 5 de Diciembre</p>
+                            <button class="btn btn-outline-primary" onclick="mostrarAlerta()">Leer más</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Alertas Bootstrap -->
+    <div id="alertContainer"></div>
+</body>
+<!-- Footer estilos de bootstrap -->
+<footer class="footer py-3 bg-dark text-light">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Legal</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-light text-decoration-none">Términos y Condiciones</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Política de Privacidad</a></li>
+                    <li><a href="#" class="text-light text-decoration-none">Aviso Legal</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Enlaces</h5>
+                <ul class="list-unstyled">
+                    <li><a href="/about" class="text-light text-decoration-none">Sobre Nosotros</a></li>
+                    <li><a href="/services" class="text-light text-decoration-none">Servicios</a></li>
+                    <li><a href="/contact" class="text-light text-decoration-none">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Redes Sociales</h5>
+                <a href="https://facebook.com" class="text-light text-decoration-none me-2">
+                    <i class="bi bi-facebook"></i> Facebook
+                </a>
+                <a href="https://instagram.com" class="text-light text-decoration-none me-2">
+                    <i class="bi bi-instagram"></i> Instagram
+                </a>
+                <a href="https://twitter.com" class="text-light text-decoration-none">
+                    <i class="bi bi-twitter"></i> Twitter
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts de Bootstrap -->
+<script src="/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    function mostrarAlerta() {
+        // Crear la alerta de Bootstrap
+        const alerta = document.createElement('div');
+        alerta.className = 'alert alert-danger fixed-bottom mb-3 me-3';
+        alerta.role = 'alert';
+        alerta.textContent = '¡Lo siento! No podemos mostrar más detalles en este momento.';
+
+        // Añadirla al contenedor
+        const container = document.getElementById('alertContainer');
+        container.appendChild(alerta);
+
+        // Eliminar la alerta después de unos segundos
+        setTimeout(() => {
+            alerta.remove();
+        }, 3000);
+    }
+</script>
+
+</html>

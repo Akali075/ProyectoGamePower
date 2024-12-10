@@ -2,24 +2,29 @@
 /* Variables */
 /* Estilos para el main */
 main {
-  /* Sección de próximos eventos */
-  /* Tabla de historial de eventos */
+  /* Sección de noticias destacadas */
 }
 main section {
   margin-bottom: 3rem;
-  /* Cards de eventos */
+  /* Cards de noticias */
 }
 main section h2 {
-  color: #45d3b4;
+  color: #00b4d8;
   text-align: center;
   margin-bottom: 1.5rem;
 }
 main section .card {
   border: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 main section .card .card-img-top {
   border-radius: 0.5rem 0.5rem 0 0;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main section .card .card-body h5 {
   color: #00b4d8;
@@ -35,22 +40,12 @@ main section .card .card-body .btn {
 main section .card .card-body .btn:hover {
   background-color: #b47aff;
 }
-main table {
-  background-color: #1a1b26;
+main section .card .card-body .btn-outline-primary {
+  background-color: #9747ff;
   color: white;
-  border-radius: 0.5rem;
-  overflow: hidden;
+  border: none;
 }
-main table thead {
-  background-color: #2d3192;
-}
-main table thead th {
-  color: #00b4d8;
-  text-transform: uppercase;
-}
-main table tbody tr:hover {
-  background-color: #242635;
-}
-main table tbody tr td {
+main section .card .card-body .btn-outline-primary:hover {
+  background-color: #b47aff;
   color: white;
-}/*# sourceMappingURL=eventos.css.map */
+}/*# sourceMappingURL=noticias.css.map */

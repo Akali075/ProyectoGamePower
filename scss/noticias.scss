@@ -3,28 +3,32 @@ $primary-color: #9747ff; // Púrpura vibrante
 $secondary-color: #2d3192; // Azul profundo
 $accent-color: #00b4d8; // Azul cian brillante
 $neutral: #1a1b26; // Gris oscuro
-$titulos: #45d3b4; // Azul profundo
 
 /* Estilos para el main */
 main {
 
-  /* Sección de próximos eventos */
+  /* Sección de noticias destacadas */
   section {
     margin-bottom: 3rem;
 
     h2 {
-      color: $titulos;
+      color: $accent-color;
       text-align: center;
       margin-bottom: 1.5rem;
     }
 
-    /* Cards de eventos */
+    /* Cards de noticias */
     .card {
       border: none;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      height: 100%; 
+      display: flex;
+      flex-direction: column;
 
       .card-img-top {
         border-radius: 0.5rem 0.5rem 0 0;
+        height: 200px;
+        object-fit: cover;
       }
 
       .card-body {
@@ -45,34 +49,16 @@ main {
             background-color: lighten($primary-color, 10%);
           }
         }
-      }
-    }
-  }
 
-  /* Tabla de historial de eventos */
-  table {
-    background-color: $neutral;
-    color: white;
-    border-radius: 0.5rem;
-    overflow: hidden;
+        .btn-outline-primary {
+            background-color: $primary-color;
+            color: white;
+            border: none;
 
-    thead {
-      background-color: $secondary-color;
-
-      th {
-        color: $accent-color;
-        text-transform: uppercase;
-      }
-    }
-
-    tbody {
-      tr {
-        &:hover {
-          background-color: lighten($neutral, 5%);
-        }
-
-        td {
-          color: lighten(white, 10%);
+          &:hover {
+            background-color: lighten($primary-color, 10%);
+            color: white;
+          }
         }
       }
     }

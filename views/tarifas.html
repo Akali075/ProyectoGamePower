@@ -11,15 +11,13 @@
   <link rel="stylesheet" href="/scss/tarifas.css">
 </head>
 
-
-
 <body class="gradient-bg text-white">
   <header>
     <!-- Navbar estilos de bootstrap -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <a href="/index.html">
-          <img src="/images/GamePower.png" alt="Logo GamePower" class="navbar-logo">
+          <img src="/images/GamePower.png" alt="Logo GamePower" class="navbar-logo" aria-label="GamePower Logo">
         </a>
         <a class="navbar-brand" href="/index.html">GamePower</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -34,7 +32,7 @@
               <a class="nav-link" href="eventos.html">Eventos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="blog.html">Noticias</a>
+              <a class="nav-link" href="noticias.html">Noticias</a>
             </li>
             <div class="dropdown">
               <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
@@ -60,6 +58,7 @@
   </header>
   <main>
     <div class="reserva-container">
+      <h2>Reservas</h2>
       <a class="btn btn-primary reserva-btn" href="reservas.html" role="button">Reservas</a>
     </div>
     <div class="container mt-4">
@@ -84,7 +83,7 @@
           <h3>PC Sala Principal:</h3>
           <div class="row align-items-center">
             <div class="col-md-6">
-              <img src="/images/SalaPrincipal.jpg" alt="PC Sala Principal" class="img-fluid rounded shadow">
+              <img src="/images/SalaPrincipal.jpg" alt="Sala principal de PC con computadoras en funcionamiento y monitores." class="img-fluid rounded shadow">
             </div>
             <div class="col-md-6">
               <table class="table table-bordered table-light table-striped text-dark mt-3">
@@ -127,11 +126,11 @@
                 <tbody>
                   <tr>
                     <td>1</td>
-                    <td>€7</td>
+                    <td>€4</td>
                   </tr>
                   <tr>
                     <td>2</td>
-                    <td>€13</td>
+                    <td>€7</td>
                   </tr>
                 </tbody>
               </table>
@@ -141,10 +140,40 @@
 
         <!-- Streaming Section -->
         <div class="tab-pane fade" id="nav-streaming" role="tabpanel" aria-labelledby="nav-streaming-tab">
-          <h3>Zona Streaming:</h3>
+          <h3>Streaming:</h3>
           <div class="row align-items-center">
             <div class="col-md-6">
-              <img src="/images/Foto3Carousel.jpg" alt="Zona Streaming" class="img-fluid rounded shadow">
+              <img src="/images/Foto3Carousel.jpg" alt="Sala de Streaming" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-6">
+              <table class="table table-bordered table-light table-striped text-dark mt-3">
+                <thead>
+                  <tr>
+                    <th>Horas</th>
+                    <th>Precio</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>€6</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>€10</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- V.I.P Section -->
+        <div class="tab-pane fade" id="nav-vip" role="tabpanel" aria-labelledby="nav-vip-tab">
+          <h3>V.I.P Sala:</h3>
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <img src="/images/SalaVIP.jpg" alt="Sala V.I.P" class="img-fluid rounded shadow">
             </div>
             <div class="col-md-6">
               <table class="table table-bordered table-light table-striped text-dark mt-3">
@@ -161,94 +190,30 @@
                   </tr>
                   <tr>
                     <td>2</td>
-                    <td>€18</td>
+                    <td>€15</td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </div>
         </div>
-
-        <!-- VIP Section -->
-        <div class="tab-pane fade" id="nav-vip" role="tabpanel" aria-labelledby="nav-vip-tab">
-          <h3>V.I.P:</h3>
-          <div class="row align-items-center">
-            <div class="col-md-6">
-              <img src="/images/SalaV.I.P.jpg" alt="Zona VIP" class="img-fluid rounded shadow">
-            </div>
-            <div class="col-md-6">
-              <table class="table table-bordered table-light table-striped text-dark mt-3">
-                <thead>
-                  <tr>
-                    <th>Horas</th>
-                    <th>Precio</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>€20</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>€35</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
+      </div> <!-- Fin del contenido de las pestañas -->
     </div>
   </main>
-  <!-- Footer estilos de bootstrap -->
   <footer class="footer py-3 bg-dark text-light">
-    <div class="container text-center">
+    <div class="container">
       <div class="row">
-        <div class="col-md-4">
-          <h5>Legal</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="#" class="text-light text-decoration-none">Términos y Condiciones</a>
-            </li>
-            <li>
-              <a href="#" class="text-light text-decoration-none">Política de Privacidad</a>
-            </li>
-            <li>
-              <a href="#" class="text-light text-decoration-none">Aviso Legal</a>
-            </li>
-          </ul>
+        <div class="col-md-6">
+          <p>&copy; 2024 GamePower. Todos los derechos reservados.</p>
         </div>
-        <div class="col-md-4">
-          <h5>Enlaces</h5>
-          <ul class="list-unstyled">
-            <li>
-              <a href="/about" class="text-light text-decoration-none">Sobre Nosotros</a>
-            </li>
-            <li>
-              <a href="/services" class="text-light text-decoration-none">Servicios</a>
-            </li>
-            <li>
-              <a href="/contact" class="text-light text-decoration-none">Contacto</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h5>Redes Sociales</h5>
-          <a href="https://facebook.com" class="text-light text-decoration-none me-2">
-            <i class="bi bi-facebook"></i> Facebook
-          </a>
-          <a href="https://instagram.com" class="text-light text-decoration-none me-2">
-            <i class="bi bi-instagram"></i> Instagram
-          </a>
-          <a href="https://twitter.com" class="text-light text-decoration-none">
-            <i class="bi bi-twitter"></i> Twitter
-          </a>
+        <div class="col-md-6 text-md-end">
+          <a href="#" class="text-light text-decoration-none">Términos y Condiciones</a>
         </div>
       </div>
     </div>
   </footer>
-  <!-- Rutas locales JS de Bootstrap -->
+
+  <!-- JS de Bootstrap y jQuery -->
   <script src="/js/bootstrap.bundle.min.js"></script>
 </body>
 
