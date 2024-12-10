@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tarifas</title>
-  <!-- Rutas locales CSS de Bootstrap -->
+  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="/scss/multiple.css" />
   <link rel="stylesheet" href="/scss/tarifas.css">
@@ -13,7 +13,7 @@
 
 <body class="gradient-bg text-white">
   <header>
-    <!-- Navbar estilos de bootstrap -->
+    <!-- Navbar estilos de Bootstrap -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
         <a href="/index.html">
@@ -35,16 +35,13 @@
               <a class="nav-link" href="noticias.html">Noticias</a>
             </li>
             <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
+              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Servicios
               </button>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="Servicios/reparaciones.html">Reparaciones</a></li>
                 <li><a class="dropdown-item" href="Servicios/socios.html">Socios</a></li>
-                <li>
-                  <a class="dropdown-item" href="Servicios/montajes.html">Montajes Personalizados</a>
-                </li>
+                <li><a class="dropdown-item" href="Servicios/montajes.html">Montajes Personalizados</a></li>
               </ul>
             </div>
           </ul>
@@ -56,23 +53,20 @@
       </div>
     </nav>
   </header>
+
   <main>
-    <div class="reserva-container">
-      <h2>Reservas</h2>
-      <a class="btn btn-primary reserva-btn" href="reservas.html" role="button">Reservas</a>
-    </div>
     <div class="container mt-4">
       <!-- Tabs -->
       <nav>
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
           <button class="nav-link active" id="nav-pc-tab" data-bs-toggle="tab" data-bs-target="#nav-pc" type="button"
             role="tab" aria-controls="nav-pc" aria-selected="true">PC</button>
-          <button class="nav-link" id="nav-consolas-tab" data-bs-toggle="tab" data-bs-target="#nav-consolas"
-            type="button" role="tab" aria-controls="nav-consolas" aria-selected="false">Consolas</button>
-          <button class="nav-link" id="nav-streaming-tab" data-bs-toggle="tab" data-bs-target="#nav-streaming"
-            type="button" role="tab" aria-controls="nav-streaming" aria-selected="false">Streaming</button>
-          <button class="nav-link" id="nav-vip-tab" data-bs-toggle="tab" data-bs-target="#nav-vip" type="button"
-            role="tab" aria-controls="nav-vip" aria-selected="false">V.I.P</button>
+          <button class="nav-link" id="nav-consolas-tab" data-bs-toggle="tab" data-bs-target="#nav-consolas" type="button"
+            role="tab" aria-controls="nav-consolas" aria-selected="false">Consolas</button>
+          <button class="nav-link" id="nav-streaming-tab" data-bs-toggle="tab" data-bs-target="#nav-streaming" type="button"
+            role="tab" aria-controls="nav-streaming" aria-selected="false">Streaming</button>
+          <button class="nav-link" id="nav-vip-tab" data-bs-toggle="tab" data-bs-target="#nav-vip" type="button" role="tab"
+            aria-controls="nav-vip" aria-selected="false">V.I.P</button>
         </div>
       </nav>
 
@@ -83,7 +77,7 @@
           <h3>PC Sala Principal:</h3>
           <div class="row align-items-center">
             <div class="col-md-6">
-              <img src="/images/SalaPrincipal.jpg" alt="Sala principal de PC con computadoras en funcionamiento y monitores." class="img-fluid rounded shadow">
+              <img src="/images/SalaPrincipal.jpg" alt="Sala principal de PC" class="img-fluid rounded shadow">
             </div>
             <div class="col-md-6">
               <table class="table table-bordered table-light table-striped text-dark mt-3">
@@ -104,6 +98,7 @@
                   </tr>
                 </tbody>
               </table>
+              <a class="btn btn-primary reserva-btn mt-3" href="reservas.html" role="button">Reservar</a>
             </div>
           </div>
         </div>
@@ -134,6 +129,7 @@
                   </tr>
                 </tbody>
               </table>
+              <a class="btn btn-primary reserva-btn mt-3" href="reservas.html" role="button">Reservar</a>
             </div>
           </div>
         </div>
@@ -164,6 +160,7 @@
                   </tr>
                 </tbody>
               </table>
+              <a class="btn btn-primary reserva-btn mt-3" href="reservas.html" role="button">Reservar</a>
             </div>
           </div>
         </div>
@@ -194,26 +191,61 @@
                   </tr>
                 </tbody>
               </table>
+              <a class="btn btn-primary reserva-btn mt-3" href="reservas.html" role="button">Reservar</a>
             </div>
           </div>
         </div>
-      </div> <!-- Fin del contenido de las pestañas -->
+      </div>
     </div>
   </main>
+
   <footer class="footer py-3 bg-dark text-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <p>&copy; 2024 GamePower. Todos los derechos reservados.</p>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>Legal</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#" class="text-light text-decoration-none">Términos y Condiciones</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-light text-decoration-none">Política de Privacidad</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-light text-decoration-none">Cookies</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Contacto</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#" class="text-light text-decoration-none">Soporte</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-light text-decoration-none">Ayuda</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Redes Sociales</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#" class="text-light text-decoration-none">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-light text-decoration-none">Instagram</a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-light text-decoration-none">Twitter</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="col-md-6 text-md-end">
-          <a href="#" class="text-light text-decoration-none">Términos y Condiciones</a>
-        </div>
-      </div>
     </div>
   </footer>
 
-  <!-- JS de Bootstrap y jQuery -->
+  <!-- Bootstrap JS -->
   <script src="/js/bootstrap.bundle.min.js"></script>
 </body>
 

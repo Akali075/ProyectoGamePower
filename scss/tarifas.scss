@@ -1,109 +1,127 @@
 /* Variables */
-$reserva-bg-color: #9747ff;
-$reserva-text-color: #2d3192;
-$tabs-bg-color: #00b4d8;
-$tabs-text-color: #1a1b26;
-$section-title-color: #45d3b4;
+$primary-color: #9747ff; // Púrpura vibrante
+$secondary-color: #2d3192; // Azul profundo
+$accent-color: #00b4d8; // Azul cian brillante
+$neutral: #1a1b26; // Gris oscuro
+$titulos: #45d3b4; // Azul profundo
+$background-image: url("/images/reservasblur.jpg"); // Cambiar por la ruta real
 
-/* Main */
 main {
+  color: $accent-color;
   padding: 2rem;
 
   .reserva-container {
-    background-color: $reserva-bg-color;
-    color: $reserva-text-color;
-    padding: 1rem;
-    border-radius: 8px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    background: $neutral url($background-image) no-repeat center center;
+    background-size: cover;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
 
     h2 {
+      color: $titulos;
       font-size: 2rem;
+      z-index: 2;
+      text-align: center;
       margin-bottom: 1rem;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     }
-
-    .reserva-btn {
-      background-color: darken($reserva-bg-color, 10%);
-      color: #fff;
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 4px;
-      text-decoration: none;
-      transition: background-color 0.3s;
-
-      &:hover {
-        background-color: darken($reserva-bg-color, 15%);
-      }
-    }
+  }
+  /* Ajuste para centrar el botón debajo de la tabla */
+  .reserva-btn {
+    background-color: $primary-color;
+    display: block;
+    margin: 0 auto;
+    width: 80%;
   }
 
   .container {
     margin-top: 2rem;
 
-    .nav-tabs {
-      background-color: $tabs-bg-color;
-      padding: 0.5rem;
-      border-radius: 8px;
-      margin-bottom: 1rem;
+    nav {
+      .nav-tabs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        list-style: none;
+        padding: 0;
+        margin: 1rem 0;
+        background-color: $neutral;
+        border-radius: 10px;
 
-      .nav-link {
-        color: $tabs-text-color;
-        border: none;
-        padding: 0.5rem 1rem;
-        border-radius: 4px;
-        transition: background-color 0.3s;
-
-        &.active {
-          background-color: lighten($tabs-bg-color, 10%);
-          color: #fff;
+        li {
+          display: inline-block;
+          margin: 0;
         }
 
-        &:hover {
-          background-color: lighten($tabs-bg-color, 5%);
+        a {
+          text-decoration: none;
+          color: $titulos;
+          padding: 0.75rem 1.5rem;
+          border-radius: 5px;
+          font-weight: bold;
+          text-transform: uppercase;
+          transition: background-color 0.3s ease, color 0.3s ease;
+
+          &.active {
+            background-color: $primary-color;
+            color: $neutral;
+          }
+
+          &:hover {
+            background-color: $secondary-color;
+            color: $accent-color;
+          }
         }
       }
     }
 
     .tab-content {
+      margin-top: 1.5rem;
       .tab-pane {
-        padding: 1rem;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
         h3 {
-          color: $section-title-color;
-          font-size: 1.5rem;
+          color: $titulos;
+          font-size: 1.25rem;
           margin-bottom: 1rem;
         }
-
         .row {
           align-items: center;
 
-          .col-md-6 {
-            img {
-              width: 100%;
-              border-radius: 8px;
-              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          img {
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          }
+
+          .table {
+            margin-top: 1rem;
+            background-color: $neutral;
+            color: $accent-color;
+            border: 1px solid $secondary-color;
+            th,
+            td {
+              padding: 0.75rem;
+              text-align: center;
             }
-
-            .table {
-              margin-top: 1rem;
-              background-color: #f8f9fa;
-              border-radius: 8px;
-
-              thead {
-                background-color: $tabs-bg-color;
-                color: #fff;
-              }
-
-              tbody {
-                tr {
-                  color: $tabs-text-color;
-                  &:nth-child(even) {
-                    background-color: lighten($tabs-bg-color, 10%);
-                  }
-                }
-              }
+            th {
+              background-color: $primary-color;
+              color: $titulos;
+            }
+            tr:nth-child(even) {
+              background-color: lighten($neutral, 5%);
             }
           }
         }
