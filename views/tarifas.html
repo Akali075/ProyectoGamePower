@@ -64,10 +64,12 @@
   <main>
     <div class="container mt-4">
       <!-- Tabs -->
-      <nav>
+      <nav aria-label="Secciones de gaming">
         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-          <button class="nav-link active fw-bold" id="nav-pc-tab" data-bs-toggle="tab" data-bs-target="#nav-pc" type="button"
-            role="tab" aria-controls="nav-pc" aria-selected="true">PC</button>
+          <button class="nav-link active fw-bold" id="nav-pc-tab" data-bs-toggle="tab" data-bs-target="#nav-pc"
+            type="button" role="tab" aria-controls="nav-pc" aria-selected="true" aria-label="Sección PC Gaming">
+            PC
+          </button>
           <button class="nav-link fw-bold" id="nav-consolas-tab" data-bs-toggle="tab" data-bs-target="#nav-consolas"
             type="button" role="tab" aria-controls="nav-consolas" aria-selected="false">Consolas</button>
           <button class="nav-link fw-bold" id="nav-streaming-tab" data-bs-toggle="tab" data-bs-target="#nav-streaming"
@@ -84,14 +86,22 @@
           <h3 class="fw-bold">PC Sala Principal:</h3>
           <div class="row align-items-center">
             <div class="col-md-6">
-              <img src="../images/SalaPrincipal.jpg" alt="Sala principal de PC" class="img-fluid rounded shadow">
+              <div class="image-container">
+                <img src="../images/SalaPrincipal.jpg"
+                  alt="Sala principal de PC gaming con múltiples estaciones de juego equipadas con monitores de alta gama y sillas gaming"
+                  class="img-fluid rounded shadow">
+              </div>
+              <div class="section-description">
+                <p>Disfruta de nuestros equipos gaming de última generación con las mejores prestaciones.</p>
+              </div>
             </div>
             <div class="col-md-6">
-              <table class="table table-bordered table-light table-striped text-dark mt-3">
+              <table class="table table-bordered table-light table-striped text-dark mt-3"
+                aria-label="Tarifas PC Gaming">
                 <thead>
                   <tr>
-                    <th>Horas</th>
-                    <th>Precio</th>
+                    <th scope="col">Horas</th>
+                    <th scope="col">Precio</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -115,7 +125,14 @@
           <h3 class="fw-bold">Consolas:</h3>
           <div class="row align-items-center">
             <div class="col-md-6">
-              <img src="../images/SalaConsolas.jpg" alt="Consolas" class="img-fluid rounded shadow">
+              <div class="image-container">
+                <img src="../images/SalaConsolas.jpg"
+                  alt="Sala de consolas con PS5, Xbox Series X y Nintendo Switch en pantallas 4K"
+                  class="img-fluid rounded shadow">
+              </div>
+              <div class="section-description">
+                <p>Zona equipada con las últimas consolas y juegos del mercado.</p>
+              </div>
             </div>
             <div class="col-md-6">
               <table class="table table-bordered table-light table-striped text-dark mt-3">
