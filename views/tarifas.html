@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tarifas</title>
+  <meta name="description"
+    content="Tarifas y servicios de GamePower - Gaming center con PCs, consolas y salas de streaming">
+  <title>Tarifas - GamePower Gaming Center</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../scss/multiple.css" />
@@ -12,23 +14,25 @@
 </head>
 
 <body class="gradient-bg text-white">
+  <a href="#main-content" class="visually-hidden-focusable">Saltar al contenido principal</a>
+
   <header role="banner">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation" aria-label="Navegación principal">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation">
       <div class="container-fluid">
-        <a href="../index.html" aria-label="Inicio - GamePower">
-          <img src="../images/GamePower.png" alt="Logo GamePower" class="navbar-logo" width="50" height="50">
+        <a href="../index.html" class="navbar-brand d-flex align-items-center">
+          <img src="../images/GamePower.png" alt="" class="navbar-logo me-2" width="50" height="50">
+          <span>GamePower</span>
         </a>
-        <a class="navbar-brand" href="../index.html">GamePower</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar menú de navegación">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="tarifas.html" aria-current="page">Tarifas</a>
+              <a class="nav-link active" href="tarifas.html" aria-current="page">Tarifas</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="eventos.html">Eventos</a>
@@ -37,194 +41,231 @@
               <a class="nav-link" href="noticias.html">Noticias</a>
             </li>
             <li class="nav-item dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="serviciosDropdown"
-                data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+              <button class="btn btn-secondary dropdown-toggle nav-link" type="button" id="serviciosDropdown"
+                data-bs-toggle="dropdown" aria-expanded="false">
                 Servicios
               </button>
-              <ul class="dropdown-menu" aria-labelledby="serviciosDropdown">
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="serviciosDropdown">
                 <li><a class="dropdown-item" href="Servicios/reparaciones.html">Reparaciones</a></li>
                 <li><a class="dropdown-item" href="Servicios/socios.html">Socios</a></li>
-                <li><a class="dropdown-item" href="Servicios/montajes.html">Montajes Personalizados</a>
-                </li>
+                <li><a class="dropdown-item" href="Servicios/montajes.html">Montajes Personalizados</a></li>
               </ul>
             </li>
           </ul>
 
-          <form class="d-flex ms-3" role="search" aria-label="Búsqueda en el sitio">
-            <label for="search-input" class="visually-hidden">Buscar en el sitio</label>
-            <input id="search-input" class="form-control me-2" type="search" placeholder="Buscar"
-              aria-label="Campo de búsqueda" />
-            <button class="btn btn-outline-light" type="submit">Buscar</button>
+          <form class="d-flex ms-3" role="search">
+            <div class="input-group">
+              <label for="search-input" class="visually-hidden">Buscar en el sitio</label>
+              <input id="search-input" class="form-control" type="search" placeholder="Buscar">
+              <button class="btn btn-outline-light" type="submit" aria-label="Realizar búsqueda">Buscar</button>
+            </div>
           </form>
         </div>
       </div>
     </nav>
   </header>
 
-  <main>
-    <div class="container mt-4">
-      <!-- Tabs -->
-      <nav aria-label="Secciones de gaming">
-        <div class="nav nav-tabs" id="nav-tab" role="tablist">
-          <button class="nav-link active fw-bold" id="nav-pc-tab" data-bs-toggle="tab" data-bs-target="#nav-pc"
-            type="button" role="tab" aria-controls="nav-pc" aria-selected="true" aria-label="Sección PC Gaming">
-            PC
-          </button>
-          <button class="nav-link fw-bold" id="nav-consolas-tab" data-bs-toggle="tab" data-bs-target="#nav-consolas"
-            type="button" role="tab" aria-controls="nav-consolas" aria-selected="true" aria-label="Sección Consolas">
-            Consolas
-          </button>
-          <button class="nav-linkfw-bold" id="nav-streaming-tab" data-bs-toggle="tab" data-bs-target="#nav-streaming"
-            type="button" role="tab" aria-controls="nav-streaming" aria-selected="true" aria-label="Sección para hacer Streaming">
-            Streaming
-          </button>
-          <button class="nav-link fw-bold" id="nav-VIP-tab" data-bs-toggle="tab" data-bs-target="#nav-VIP"
-            type="button" role="tab" aria-controls="nav-VIP" aria-selected="true" aria-label="Sección VIP">
-            V.I.P
-          </button>
-        </div>
-      </nav>
+  <main id="main-content" class="container mt-4" role="main">
+    <h1 class="visually-hidden">Tarifas de GamePower</h1>
 
-      <!-- Tabs Content -->
-      <div class="tab-content mt-3" id="nav-tabContent">
-        <!-- PC Section -->
-        <div class="tab-pane fade show active" id="nav-pc" role="tabpanel" aria-labelledby="nav-pc-tab">
-          <h3 class="fw-bold">PC Sala Principal:</h3>
+    <div class="nav nav-tabs" role="tablist" aria-label="Categorías de servicios">
+      <button class="nav-link active fw-bold" id="nav-pc-tab" data-bs-toggle="tab" data-bs-target="#nav-pc"
+        type="button" role="tab" aria-controls="nav-pc" aria-selected="true">
+        PC Gaming
+      </button>
+      <button class="nav-link fw-bold" id="nav-consolas-tab" data-bs-toggle="tab" data-bs-target="#nav-consolas"
+        type="button" role="tab" aria-controls="nav-consolas" aria-selected="false">
+        Consolas
+      </button>
+      <button class="nav-link fw-bold" id="nav-streaming-tab" data-bs-toggle="tab" data-bs-target="#nav-streaming"
+        type="button" role="tab" aria-controls="nav-streaming" aria-selected="false">
+        Streaming
+      </button>
+      <button class="nav-link fw-bold" id="nav-VIP-tab" data-bs-toggle="tab" data-bs-target="#nav-VIP" type="button"
+        role="tab" aria-controls="nav-VIP" aria-selected="false">
+        V.I.P
+      </button>
+    </div>
+    <div class="tab-content mt-3" id="nav-tabContent">
+      <!-- PC Section -->
+      <div class="tab-pane fade show active" id="nav-pc" role="tabpanel" aria-labelledby="nav-pc-tab" tabindex="0">
+        <section aria-labelledby="pc-title">
+          <h2 id="pc-title" class="fw-bold">PC Sala Principal</h2>
           <div class="row align-items-center">
             <div class="col-md-6">
-              <div class="image-container">
+              <figure class="image-container">
                 <img src="../images/SalaPrincipal.jpg"
-                  alt="Sala principal de PC gaming con múltiples estaciones de juego equipadas con monitores de alta gama y sillas gaming"
+                  alt="Sala principal de PC gaming con estaciones equipadas con monitores y sillas gaming"
                   class="img-fluid rounded shadow">
-              </div>
-              <div class="section-description">
-                <p>Disfruta de nuestros equipos gaming de última generación con las mejores prestaciones.</p>
-              </div>
+                <figcaption class="section-description">
+                  Disfruta de nuestros equipos gaming de última generación con las mejores prestaciones
+                </figcaption>
+              </figure>
             </div>
             <div class="col-md-6">
-              <table class="table table-bordered table-light table-striped text-dark mt-3"
-                aria-label="Tarifas PC Gaming">
-                <thead>
-                  <tr>
-                    <th scope="col">Horas</th>
-                    <th scope="col">Precio</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>€5</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>€9</td>
-                  </tr>
-                </tbody>
-              </table>
-              <a class="btn btn-primary reserva-btn mt-3" href="reservas.html" role="button">Reservar</a>
+              <div class="table-responsive">
+                <table class="table table-bordered table-light table-striped text-dark mt-3">
+                  <caption class="visually-hidden">Tarifas para PC Gaming</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Duración (Horas)</th>
+                      <th scope="col">Precio (€)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1 hora</td>
+                      <td>5€</td>
+                    </tr>
+                    <tr>
+                      <td>2 horas</td>
+                      <td>9€</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <a class="btn btn-primary reserva-btn mt-3" href="reservas.html" aria-label="Reservar PC Gaming">
+                Reservar
+              </a>
             </div>
           </div>
-        </div>
+        </section>
+      </div>
 
-        <!-- Consolas Section -->
-        <div class="tab-pane fade" id="nav-consolas" role="tabpanel" aria-labelledby="nav-consolas-tab">
-          <h3 class="fw-bold">Consolas:</h3>
+      <!-- Consolas Section -->
+      <div class="tab-pane fade" id="nav-consolas" role="tabpanel" aria-labelledby="nav-consolas-tab" tabindex="0">
+        <section aria-labelledby="consolas-title">
+          <h2 id="consolas-title" class="fw-bold">Consolas</h2>
           <div class="row align-items-center">
             <div class="col-md-6">
-              <div class="image-container">
+              <figure class="image-container">
                 <img src="../images/SalaConsolas.jpg"
-                  alt="Sala de consolas con PS5, Xbox Series X y Nintendo Switch en pantallas 4K"
+                  alt="Sala de consolas con múltiples estaciones de juego que incluyen PS5, Xbox Series X y Nintendo Switch conectadas a pantallas 4K"
                   class="img-fluid rounded shadow">
-              </div>
-              <div class="section-description">
-                <p>Zona equipada con las últimas consolas y juegos del mercado.</p>
-              </div>
+                <figcaption class="section-description">
+                  Zona equipada con las últimas consolas y juegos del mercado, incluyendo PS5, Xbox Series X y Nintendo
+                  Switch
+                </figcaption>
+              </figure>
             </div>
             <div class="col-md-6">
-              <table class="table table-bordered table-light table-striped text-dark mt-3">
-                <thead>
-                  <tr>
-                    <th>Horas</th>
-                    <th>Precio</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>€4</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>€7</td>
-                  </tr>
-                </tbody>
-              </table>
-              <a class="btn btn-primary reserva-btn mt-3" href="reservas.html" role="button">Reservar</a>
+              <div class="table-responsive">
+                <table class="table table-bordered table-light table-striped text-dark mt-3">
+                  <caption class="visually-hidden">Tarifas para zona de consolas</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Duración (Horas)</th>
+                      <th scope="col">Precio (€)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1 hora</td>
+                      <td>4€</td>
+                    </tr>
+                    <tr>
+                      <td>2 horas</td>
+                      <td>7€</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <a class="btn btn-primary reserva-btn mt-3" href="reservas.html" aria-label="Reservar zona de consolas">
+                Reservar
+              </a>
             </div>
           </div>
-        </div>
+        </section>
+      </div>
 
-        <!-- Streaming Section -->
-        <div class="tab-pane fade" id="nav-streaming" role="tabpanel" aria-labelledby="nav-streaming-tab">
-          <h3 class="fw-bold">Streaming:</h3>
+      <!-- Streaming Section -->
+      <div class="tab-pane fade" id="nav-streaming" role="tabpanel" aria-labelledby="nav-streaming-tab" tabindex="0">
+        <section aria-labelledby="streaming-title">
+          <h2 id="streaming-title" class="fw-bold">Streaming</h2>
           <div class="row align-items-center">
             <div class="col-md-6">
-              <img src="../images/Foto3Carousel.jpg" alt="Sala de Streaming" class="img-fluid rounded shadow">
+              <figure class="image-container">
+                <img src="../images/Foto3Carousel.jpg"
+                  alt="Sala de streaming profesional equipada con cámara, micrófono de alta calidad, iluminación y pantalla verde"
+                  class="img-fluid rounded shadow">
+                <figcaption class="section-description">
+                  Espacio profesional para streaming con equipamiento de alta calidad para crear contenido
+                </figcaption>
+              </figure>
             </div>
             <div class="col-md-6">
-              <table class="table table-bordered table-light table-striped text-dark mt-3">
-                <thead>
-                  <tr>
-                    <th>Horas</th>
-                    <th>Precio</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>€6</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>€10</td>
-                  </tr>
-                </tbody>
-              </table>
-              <a class="btn btn-primary reserva-btn mt-3" href="reservas.html" role="button">Reservar</a>
+              <div class="table-responsive">
+                <table class="table table-bordered table-light table-striped text-dark mt-3">
+                  <caption class="visually-hidden">Tarifas para sala de streaming</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Duración (Horas)</th>
+                      <th scope="col">Precio (€)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1 hora</td>
+                      <td>6€</td>
+                    </tr>
+                    <tr>
+                      <td>2 horas</td>
+                      <td>10€</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <a class="btn btn-primary reserva-btn mt-3" href="reservas.html" aria-label="Reservar sala de streaming">
+                Reservar
+              </a>
             </div>
           </div>
-        </div>
+        </section>
+      </div>
 
-        <!-- V.I.P Section -->
-        <div class="tab-pane fade" id="nav-VIP" role="tabpanel" aria-labelledby="nav-VIP-tab">
-          <h3 class="fw-bold">V.I.P Sala:</h3>
+      <!-- V.I.P Section -->
+      <div class="tab-pane fade" id="nav-VIP" role="tabpanel" aria-labelledby="nav-VIP-tab" tabindex="0">
+        <section aria-labelledby="vip-title">
+          <h2 id="vip-title" class="fw-bold">Sala V.I.P</h2>
           <div class="row align-items-center">
             <div class="col-md-6">
-              <img src="../images/SalaVIP.jpg" alt="Sala V.I.P" class="img-fluid rounded shadow">
+              <figure class="image-container">
+                <img src="../images/SalaVIP.jpg"
+                  alt="Sala VIP exclusiva con configuración premium, monitores de alta gama, iluminación ambiental y asientos ergonómicos de lujo"
+                  class="img-fluid rounded shadow">
+                <figcaption class="section-description">
+                  Experiencia gaming premium en un ambiente exclusivo con el mejor equipamiento
+                </figcaption>
+              </figure>
             </div>
             <div class="col-md-6">
-              <table class="table table-bordered table-light table-striped text-dark mt-3">
-                <thead>
-                  <tr>
-                    <th>Horas</th>
-                    <th>Precio</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>€10</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>€15</td>
-                  </tr>
-                </tbody>
-              </table>
-              <a class="btn btn-primary reserva-btn mt-3" href="reservas.html" role="button">Reservar</a>
+              <div class="table-responsive">
+                <table class="table table-bordered table-light table-striped text-dark mt-3">
+                  <caption class="visually-hidden">Tarifas para sala VIP</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Duración (Horas)</th>
+                      <th scope="col">Precio (€)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1 hora</td>
+                      <td>10€</td>
+                    </tr>
+                    <tr>
+                      <td>2 horas</td>
+                      <td>15€</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <a class="btn btn-primary reserva-btn mt-3" href="reservas.html" aria-label="Reservar sala VIP">
+                Reservar
+              </a>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   </main>
@@ -280,6 +321,31 @@
 
   <!-- Bootstrap JS -->
   <script src="../js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Enhance tab navigation with keyboard
+    document.querySelectorAll('[role="tab"]').forEach(tab => {
+      tab.addEventListener('keydown', e => {
+        const tabs = Array.from(tab.parentElement.children);
+        const index = tabs.indexOf(tab);
+        let newTab;
+
+        switch (e.key) {
+          case 'ArrowLeft':
+            newTab = tabs[index - 1] || tabs[tabs.length - 1];
+            break;
+          case 'ArrowRight':
+            newTab = tabs[index + 1] || tabs[0];
+            break;
+        }
+
+        if (newTab) {
+          e.preventDefault();
+          newTab.click();
+          newTab.focus();
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
