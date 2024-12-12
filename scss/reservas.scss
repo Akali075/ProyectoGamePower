@@ -1,53 +1,80 @@
-//Reservas
+// Variables de color
+$background-dark: #333;
+$primary-color: #1e90ff;
+$primary-hover: #63b8ff;
+$text-color-light: #fff;
+$text-placeholder: #bbb;
+$error-color: #ff4d4d;
 
+// Reservas
 .reservation-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px); 
   background: url("../images/reservasblur.jpg") no-repeat center center/cover;
+    margin-bottom: 40px; 
 }
+
 .reservation-form {
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 20px;
   padding: 30px 40px;
   text-align: center;
-  color: white;
+  color: $text-color-light;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-.reservation-form h2 {
-  margin-bottom: 20px;
-}
-.reservation-form .form-control {
-  background-color: #333;
-  color: white;
-  border: none;
-  margin-bottom: 15px;
-  border-radius: 5px;
-}
-.reservation-form .form-control:focus {
-  outline: none;
-  box-shadow: 0 0 5px #1e90ff;
-}
-.reservation-form .btn-reserve {
-  background-color: #1e90ff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-}
-.reservation-form .btn-reserve:hover {
-  background-color: #63b8ff;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .form-control {
+    background-color: $background-dark;
+    color: $text-color-light;
+    border: none;
+    margin-bottom: 15px;
+    border-radius: 5px;
+
+    &::placeholder {
+      color: $text-placeholder;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 5px $primary-color;
+    }
+  }
+
+  .btn-reserve {
+    background-color: $primary-color;
+    color: $text-color-light;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+
+    &:hover {
+      background-color: $primary-hover;
+    }
+  }
+
+  .invalid-feedback {
+    color: $error-color;
+    font-size: 0.9em;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
 }
 
+// General
 .form-control {
-  background-color: #333;
+  background-color: $background-dark;
   border: none;
-  color: #fff;
+  color: $text-color-light;
   margin-bottom: 15px;
   padding: 10px;
 
   &::placeholder {
-    color: #bbb;
+    color: $text-placeholder;
   }
 }
