@@ -5,6 +5,8 @@ $accent-color: #00b4d8;
 $neutral: #1a1b26;
 $titulos: #45d3b4;
 
+
+
 .image-container {
   aspect-ratio: 16/9;
   overflow: visible;
@@ -43,20 +45,21 @@ $titulos: #45d3b4;
 
 /* Navigation Tabs Improvements */
 .nav-tabs {
-  border-bottom: 2px solid $secondary-color;
+  border-bottom: 2px solid $neutral;
 
   .nav-link {
     position: relative;
+    color: $neutral;
     transition: all 0.3s ease;
 
     &:focus {
-      outline: 2px solid $accent-color;
+      outline: 2px solid $neutral;
       outline-offset: -2px;
-      box-shadow: 0 0 0 3px rgba($accent-color, 0.3);
+      box-shadow: 0 0 0 3px rgba($neutral, 0.3);
     }
 
     &.active {
-      background-color: $primary-color;
+      background-color: $neutral;
       border-color: transparent;
       color: white;
 
@@ -170,4 +173,17 @@ $titulos: #45d3b4;
   outline-offset: 2px;
 }
 
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: $accent-color;
+  color: $neutral;
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.3s;
 
+  &:focus {
+    top: 0;
+  }
+}

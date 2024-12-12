@@ -37,19 +37,20 @@
 
 /* Navigation Tabs Improvements */
 .nav-tabs {
-  border-bottom: 2px solid #2d3192;
+  border-bottom: 2px solid #1a1b26;
 }
 .nav-tabs .nav-link {
   position: relative;
+  color: #1a1b26;
   transition: all 0.3s ease;
 }
 .nav-tabs .nav-link:focus {
-  outline: 2px solid #00b4d8;
+  outline: 2px solid #1a1b26;
   outline-offset: -2px;
-  box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.3);
+  box-shadow: 0 0 0 3px rgba(26, 27, 38, 0.3);
 }
 .nav-tabs .nav-link.active {
-  background-color: #9747ff;
+  background-color: #1a1b26;
   border-color: transparent;
   color: white;
 }
@@ -142,4 +143,18 @@
 :focus-visible {
   outline: 3px solid #00b4d8;
   outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #00b4d8;
+  color: #1a1b26;
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.3s;
+}
+.skip-link:focus {
+  top: 0;
 }/*# sourceMappingURL=tarifas.css.map */
