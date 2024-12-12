@@ -94,6 +94,7 @@
   transition: all 0.3s ease;
   width: auto;
   min-width: 200px;
+  margin-bottom: 20px;
 }
 .reserva-btn:hover {
   background-color: #7a14ff;

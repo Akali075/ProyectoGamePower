@@ -17,6 +17,7 @@ main section h2 {
 main section .card {
   border: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
 }
 main section .card .card-img-top {
   border-radius: 0.5rem 0.5rem 0 0;
@@ -80,4 +81,25 @@ a:focus {
 }
 .tooltip .arrow::before {
   border-top-color: #9747ff;
+}
+
+/* Estilos para la tabla responsiva */
+@media (max-width: 768px) {
+  .table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto; /* Muestra la tabla horizontalmente en dispositivos más pequeños */
+  }
+  .table th, .table td {
+    display: block; /* Ajusta las celdas a un formato de bloque para facilitar la lectura */
+    text-align: left;
+    padding: 0.5rem;
+  }
+  .table th::before {
+    content: attr(data-title);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #45d3b4;
+  }
 }/*# sourceMappingURL=eventos.css.map */

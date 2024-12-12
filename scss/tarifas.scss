@@ -109,6 +109,7 @@ $titulos: #45d3b4;
   transition: all 0.3s ease;
   width: auto;
   min-width: 200px;
+  margin-bottom: 20px;
 
   &:hover {
     background-color: darken($primary-color, 10%);
@@ -168,3 +169,5 @@ $titulos: #45d3b4;
   outline: 3px solid $accent-color;
   outline-offset: 2px;
 }
+
+

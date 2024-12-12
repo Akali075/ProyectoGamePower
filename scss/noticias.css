@@ -16,9 +16,9 @@ main section h2 {
 main section .card {
   border: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  height: 100%;
-  display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
+  height: 100%;
 }
 main section .card .card-img-top {
   border-radius: 0.5rem 0.5rem 0 0;
