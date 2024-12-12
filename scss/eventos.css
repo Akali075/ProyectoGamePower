@@ -53,4 +53,31 @@ main table tbody tr:hover {
 }
 main table tbody tr td {
   color: white;
+}
+
+/* Botones accesibles */
+.btn:focus {
+  outline: 2px solid #00b4d8;
+  outline-offset: 2px;
+}
+
+/* Contrastes optimizados */
+body {
+  color: #434663;
+}
+
+/* Focus de enlaces */
+a:focus {
+  text-decoration: underline;
+  color: #00b4d8;
+}
+
+.tooltip.bs-tooltip-top .tooltip-inner {
+  background-color: #9747ff;
+  color: white;
+  font-weight: bold;
+  border: 1px solid #b47aff;
+}
+.tooltip .arrow::before {
+  border-top-color: #9747ff;
 }/*# sourceMappingURL=eventos.css.map */

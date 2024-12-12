@@ -80,7 +80,8 @@
                                     está
                                     arrasando en las críticas. </p>
                                 <p class="text-muted">Fecha: 12 de Diciembre</p>
-                                <button class="btn btn-outline-primary" onclick="mostrarAlerta()">Leer más</button>
+                                <button class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="Próximamente disponible" onclick="mostrarAlerta()">Leer más</button>
                             </div>
                         </div>
                     </div>
@@ -92,7 +93,8 @@
                                 <p class="card-text">Analizamos el mejor equipo para gaming del año, con un rendimiento
                                     excepcional y características de última generación.</p>
                                 <p class="text-muted">Fecha: 10 de Diciembre</p>
-                                <button class="btn btn-outline-primary" onclick="mostrarAlerta()">Leer más</button>
+                                <button class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="Próximamente disponible" onclick="mostrarAlerta()">Leer más</button>
                             </div>
                         </div>
                     </div>
@@ -105,7 +107,8 @@
                                     con
                                     participación de equipos profesionales y grandes premios.</p>
                                 <p class="text-muted">Fecha: 22 de Diciembre</p>
-                                <button class="btn btn-outline-primary" onclick="mostrarAlerta()">Leer más</button>
+                                <button class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="Próximamente disponible" onclick="mostrarAlerta()">Leer más</button>
                             </div>
                         </div>
                     </div>
@@ -125,7 +128,8 @@
                                 <p class="card-text">Explora las nuevas tecnologías y avances en componentes de PC que
                                     marcarán el futuro del gaming.</p>
                                 <p class="text-muted">Fecha: 8 de Diciembre</p>
-                                <button class="btn btn-outline-primary" onclick="mostrarAlerta()">Leer más</button>
+                                <button class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="Próximamente disponible" onclick="mostrarAlerta()">Leer más</button>
                             </div>
                         </div>
                     </div>
@@ -138,7 +142,8 @@
                                 <p class="card-text">Descubre si vale la pena invertir en la última GPU de Nvidia y cómo
                                     afecta el rendimiento en juegos exigentes.</p>
                                 <p class="text-muted">Fecha: 5 de Diciembre</p>
-                                <button class="btn btn-outline-primary" onclick="mostrarAlerta()">Leer más</button>
+                                <button class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="top"
+                                    title="Próximamente disponible" onclick="mostrarAlerta()">Leer más</button>
                             </div>
                         </div>
                     </div>
@@ -203,21 +208,24 @@
 
     <script>
         function mostrarAlerta() {
-            // Crear la alerta de Bootstrap
             const alerta = document.createElement('div');
             alerta.className = 'alert alert-danger fixed-bottom mb-3 me-3';
             alerta.role = 'alert';
             alerta.textContent = '¡Lo siento! No podemos mostrar más detalles en este momento.';
 
-            // Añadirla al contenedor
             const container = document.getElementById('alertContainer');
             container.appendChild(alerta);
 
-            // Eliminar la alerta después de unos segundos
             setTimeout(() => {
                 alerta.remove();
             }, 3000);
         }
+        document.addEventListener('DOMContentLoaded', function () {
+            const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+        });
     </script>
 
 </html>

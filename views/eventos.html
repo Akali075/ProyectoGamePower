@@ -4,212 +4,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventos</title>
-    <!-- Rutas locales CSS de Bootstrap -->
+    <meta name="description"
+        content="Explora eventos destacados y pasados de GamePower, desde torneos hasta LAN parties.">
+    <title>Eventos - GamePower</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../scss/multiple.css" />
     <link rel="stylesheet" href="../scss/eventos.css">
 </head>
 
-
 <body class="gradient-bg text-white">
+    <header role="banner">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation" aria-label="Navegación principal">
+            <div class="container-fluid">
+                <a href="../index.html" aria-label="Inicio - GamePower">
+                    <img src="../images/GamePower.png" alt="Logo GamePower" class="navbar-logo" width="50" height="50">
+                </a>
+                <a class="navbar-brand" href="../index.html">GamePower</a>
 
-    <body class="gradient-bg text-white">
-        <header role="banner">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation"
-                aria-label="Navegación principal">
-                <div class="container-fluid">
-                    <a href="../index.html" aria-label="Inicio - GamePower">
-                        <img src="../images/GamePower.png" alt="Logo GamePower" class="navbar-logo" width="50"
-                            height="50">
-                    </a>
-                    <a class="navbar-brand" href="../index.html">GamePower</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="tarifas.html" aria-current="page">Tarifas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="eventos.html">Eventos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="noticias.html">Noticias</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="serviciosDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                                Servicios
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="serviciosDropdown">
+                                <li><a class="dropdown-item" href="Servicios/reparaciones.html">Reparaciones</a>
+                                </li>
+                                <li><a class="dropdown-item" href="Servicios/socios.html">Socios</a></li>
+                                <li><a class="dropdown-item" href="Servicios/montajes.html">Montajes
+                                        Personalizados</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
 
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="tarifas.html" aria-current="page">Tarifas</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="eventos.html">Eventos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="noticias.html">Noticias</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="serviciosDropdown"
-                                    data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
-                                    Servicios
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="serviciosDropdown">
-                                    <li><a class="dropdown-item" href="Servicios/reparaciones.html">Reparaciones</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="Servicios/socios.html">Socios</a></li>
-                                    <li><a class="dropdown-item" href="Servicios/montajes.html">Montajes
-                                            Personalizados</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                        <form class="d-flex ms-3" role="search" aria-label="Búsqueda en el sitio">
-                            <label for="search-input" class="visually-hidden">Buscar en el sitio</label>
-                            <input id="search-input" class="form-control me-2" type="search" placeholder="Buscar"
-                                aria-label="Campo de búsqueda" />
-                            <button class="btn btn-outline-light" type="submit">Buscar</button>
-                        </form>
-                    </div>
+                    <form class="d-flex ms-3" role="search" aria-label="Búsqueda en el sitio">
+                        <label for="search-input" class="visually-hidden">Buscar en el sitio</label>
+                        <input id="search-input" class="form-control me-2" type="search" placeholder="Buscar"
+                            aria-label="Campo de búsqueda" />
+                        <button class="btn btn-outline-light" type="submit">Buscar</button>
+                    </form>
                 </div>
-            </nav>
-        </header>
-        <main class="container my-4">
-            <!-- Próximos eventos destacados -->
-            <section aria-labelledby="proximos-eventos">
-                <h2 id="proximos-eventos" class="text-center my-4 fw-bold">Próximos Eventos</h2>
-                <div class="row" role="list">
-                    <div class="col-md-4" role="listitem">
-                        <div class="card shadow-sm">
-                            <img src="../images/valorant.jpeg" class="card-img-top"
-                                alt="Imagen promocional del torneo de Valorant">
-                            <div class="card-body">
-                                <h5 class="card-title">Torneo de Valorant</h5>
-                                <p class="card-text">Participa en el torneo más emocionante de shooters. ¡Premios en
-                                    efectivo!</p>
-                                <p class="text-muted">Fecha: <time datetime="2024-12-15">15 de Diciembre</time></p>
-                                <a href="#" class="btn btn-primary">Inscribirme</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4" role="listitem">
-                        <div class="card shadow-sm">
-                            <img src="../images/party.jpg" class="card-img-top" alt="Imagen promocional de la LAN Party">
-                            <div class="card-body">
-                                <h5 class="card-title">Noche de LAN Party</h5>
-                                <p class="card-text">Disfruta con tus amigos de una noche de gaming sin interrupciones.
-                                </p>
-                                <p class="text-muted">Fecha: <time datetime="2024-12-20">20 de Diciembre</time></p>
-                                <a href="#" class="btn btn-primary">Ver detalles</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4" role="listitem">
-                        <div class="card shadow-sm">
-                            <img src="../images/fifa.jpg" class="card-img-top"
-                                alt="Imagen promocional del torneo de FIFA 24">
-                            <div class="card-body">
-                                <h5 class="card-title">Torneo de FIFA 25</h5>
-                                <p class="card-text">Demuestra tus habilidades en el FIFA y gana grandes premios.</p>
-                                <p class="text-muted">Fecha: <time datetime="2024-12-25">25 de Diciembre</time></p>
-                                <a href="#" class="btn btn-primary">Inscribirme</a>
-                            </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container my-4">
+        <section aria-labelledby="proximos-eventos">
+            <h2 id="proximos-eventos" class="text-center my-4 fw-bold">Próximos Eventos</h2>
+            <div class="row" role="list">
+                <div class="col-md-4" role="listitem">
+                    <div class="card shadow-sm">
+                        <img src="../images/valorant.jpeg" class="card-img-top"
+                            alt="Imagen promocional del torneo de Valorant">
+                        <div class="card-body">
+                            <h5 class="card-title">Torneo de Valorant</h5>
+                            <p class="card-text">Participa en el torneo más emocionante de shooters. ¡Premios en
+                                efectivo!</p>
+                            <p class="text-muted">Fecha: <time datetime="2024-12-15">15 de Diciembre</time></p>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="Próximamente disponible">
+                                Inscribirme
+                            </a>
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <!-- Lista de eventos -->
-            <section aria-labelledby="historial-eventos" class="my-5">
-                <h2 id="historial-eventos" class="text-center fw-bold">Historial de Eventos</h2>
-                <table class="table table-striped table-hover mt-3" role="table"
-                    aria-label="Historial de eventos pasados">
-                    <thead class="table-dark">
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Nombre del Evento</th>
-                            <th scope="col">Fecha</th>
-                            <th scope="col">Participantes</th>
-                            <th scope="col">Ganador</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Torneo de League of Legends</td>
-                            <td><time datetime="2024-11-10">10 Noviembre</time></td>
-                            <td>10 Equipos</td>
-                            <td>EscarabajosEnjoyers</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Noche Retro Gaming</td>
-                            <td><time datetime="2024-11-18">18 Noviembre</time></td>
-                            <td>25 Personas</td>
-                            <td>No disponible</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Torneo de Fortnite</td>
-                            <td><time datetime="2024-11-25">25 Noviembre</time></td>
-                            <td>50 Jugadores</td>
-                            <td>TuCani25</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Torneo de R6</td>
-                            <td><time datetime="2024-12-10">10 Diciembre</time></td>
-                            <td>10 Equipos</td>
-                            <td>AyTuMuertos</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-        </main>
-
-        <!-- Footer estilos de bootstrap -->
-        <footer class="footer py-3 bg-dark text-light" role="contentinfo">
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h3>Legal</h3>
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="/legal/terminos" class="text-light">Términos y Condiciones</a>
-                            </li>
-                            <li>
-                                <a href="/legal/privacidad" class="text-light">Política de Privacidad</a>
-                            </li>
-                            <li>
-                                <a href="/legal/aviso" class="text-light">Aviso Legal</a>
-                            </li>
-                        </ul>
+                <div class="col-md-4" role="listitem">
+                    <div class="card shadow-sm">
+                        <img src="../images/party.jpg" class="card-img-top" alt="Imagen promocional de la LAN Party">
+                        <div class="card-body">
+                            <h5 class="card-title">Noche de LAN Party</h5>
+                            <p class="card-text">Disfruta con tus amigos de una noche de gaming sin interrupciones.
+                            </p>
+                            <p class="text-muted">Fecha: <time datetime="2024-12-20">20 de Diciembre</time></p>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="Próximamente disponible">
+                                Ver detalles
+                            </a>
+                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <h3>Enlaces</h3>
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="/about" class="text-light text-decoration-none">Sobre Nosotros</a>
-                            </li>
-                            <li>
-                                <a href="/services" class="text-light text-decoration-none">Servicios</a>
-                            </li>
-                            <li>
-                                <a href="/contact" class="text-light text-decoration-none">Contacto</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4">
-                        <h3>Redes Sociales</h3>
-                        <ul class="list-unstyled">
-                            <a href="https://facebook.com" class="text-light text-decoration-none me-2">
-                                <i class="bi bi-facebook"></i> Facebook
+                </div>
+                <div class="col-md-4" role="listitem">
+                    <div class="card shadow-sm">
+                        <img src="../images/fifa.jpg" class="card-img-top"
+                            alt="Imagen promocional del torneo de FIFA 24">
+                        <div class="card-body">
+                            <h5 class="card-title">Torneo de FIFA 25</h5>
+                            <p class="card-text">Demuestra tus habilidades en el FIFA y gana grandes premios.
+                            </p>
+                            <p class="text-muted">Fecha: <time datetime="2024-12-25">25 de Diciembre</time></p>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="Próximamente disponible">
+                                Inscribirme
                             </a>
-                            <a href="https://instagram.com" class="text-light text-decoration-none me-2">
-                                <i class="bi bi-instagram"></i> Instagram
-                            </a>
-                            <a href="https://twitter.com" class="text-light text-decoration-none">
-                                <i class="bi bi-twitter"></i> Twitter
-                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </footer>
-    </body>
-    <!-- Rutas locales JS de Bootstrap -->
-    <script src="../js/bootstrap.bundle.min.js"></script>
+        </section>
+
+        <!-- Lista de eventos -->
+        <section aria-labelledby="historial-eventos" class="my-5">
+            <h2 id="historial-eventos" class="text-center fw-bold">Historial de Eventos</h2>
+            <table class="table table-striped table-hover mt-3">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre del Evento</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Participantes</th>
+                        <th scope="col">Ganador</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Torneo de League of Legends</td>
+                        <td><time datetime="2024-11-10">10 Noviembre</time></td>
+                        <td>10 Equipos</td>
+                        <td>EscarabajosEnjoyers</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Noche Retro Gaming</td>
+                        <td><time datetime="2024-11-18">18 Noviembre</time></td>
+                        <td>25 Personas</td>
+                        <td>No disponible</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Torneo de Fortnite</td>
+                        <td><time datetime="2024-11-25">25 Noviembre</time></td>
+                        <td>50 Jugadores</td>
+                        <td>TuCani25</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Torneo de R6</td>
+                        <td><time datetime="2024-12-10">10 Diciembre</time></td>
+                        <td>10 Equipos</td>
+                        <td>AyTuMuertos</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Footer estilos de bootstrap -->
+    <footer class="footer py-3 bg-dark text-light" role="contentinfo">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Legal</h3>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="/legal/terminos" class="text-light">Términos y Condiciones</a>
+                        </li>
+                        <li>
+                            <a href="/legal/privacidad" class="text-light">Política de Privacidad</a>
+                        </li>
+                        <li>
+                            <a href="/legal/aviso" class="text-light">Aviso Legal</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Enlaces</h3>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="/about" class="text-light text-decoration-none">Sobre Nosotros</a>
+                        </li>
+                        <li>
+                            <a href="/services" class="text-light text-decoration-none">Servicios</a>
+                        </li>
+                        <li>
+                            <a href="/contact" class="text-light text-decoration-none">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Redes Sociales</h3>
+                    <ul class="list-unstyled">
+                        <a href="https://facebook.com" class="text-light text-decoration-none me-2">
+                            <i class="bi bi-facebook"></i> Facebook
+                        </a>
+                        <a href="https://instagram.com" class="text-light text-decoration-none me-2">
+                            <i class="bi bi-instagram"></i> Instagram
+                        </a>
+                        <a href="https://twitter.com" class="text-light text-decoration-none">
+                            <i class="bi bi-twitter"></i> Twitter
+                        </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<!-- Rutas locales JS de Bootstrap -->
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    });
+</script>
 
 </html>

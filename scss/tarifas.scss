@@ -1,59 +1,67 @@
-/* Variables - keep your existing ones */
+/* Variables */
 $primary-color: #9747ff;
 $secondary-color: #2d3192;
 $accent-color: #00b4d8;
 $neutral: #1a1b26;
 $titulos: #45d3b4;
 
-/* Image Container Styles */
 .image-container {
   aspect-ratio: 16/9;
-  overflow: hidden;
+  overflow: visible;
   border-radius: 8px;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  
+  position: relative;
+
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
-    
+    border-radius: 8px;
+
     &:hover {
       transform: scale(1.02);
     }
   }
-}
 
-/* Section Description */
-.section-description {
-  margin-top: 1rem;
-  color: $accent-color;
-  font-size: 1.1rem;
-  text-align: center;
+  figcaption {
+    position: relative;
+    margin-top: 1rem;
+    color: #ffffff;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+    line-height: 1.4;
+    backdrop-filter: blur(4px);
+  }
 }
 
 /* Navigation Tabs Improvements */
 .nav-tabs {
   border-bottom: 2px solid $secondary-color;
-  
+
   .nav-link {
     position: relative;
     transition: all 0.3s ease;
-    
+
     &:focus {
       outline: 2px solid $accent-color;
       outline-offset: -2px;
       box-shadow: 0 0 0 3px rgba($accent-color, 0.3);
     }
-    
+
     &.active {
       background-color: $primary-color;
       border-color: transparent;
       color: white;
-      
+
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: -2px;
         left: 0;
@@ -65,13 +73,13 @@ $titulos: #45d3b4;
   }
 }
 
-/* Table Styles Enhancement */
+/* Estilos de tablas */
 .table {
   border-collapse: separate;
   border-spacing: 0;
   border-radius: 8px;
   overflow: hidden;
-  
+
   th {
     background-color: $primary-color;
     color: white;
@@ -79,13 +87,13 @@ $titulos: #45d3b4;
     padding: 1rem;
     text-align: center;
   }
-  
+
   td {
     padding: 1rem;
     text-align: center;
     transition: background-color 0.2s ease;
   }
-  
+
   tbody tr {
     &:hover {
       background-color: rgba($accent-color, 0.1);
@@ -93,7 +101,7 @@ $titulos: #45d3b4;
   }
 }
 
-/* Button Improvements */
+/* Estilos de botones */
 .reserva-btn {
   background-color: $primary-color;
   border: none;
@@ -101,13 +109,13 @@ $titulos: #45d3b4;
   transition: all 0.3s ease;
   width: auto;
   min-width: 200px;
-  
+
   &:hover {
     background-color: darken($primary-color, 10%);
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
-  
+
   &:focus {
     outline: 3px solid $accent-color;
     outline-offset: 2px;
@@ -115,29 +123,30 @@ $titulos: #45d3b4;
   }
 }
 
-/* Responsive Design */
+/* Diseño responsivo */
 @media (max-width: 768px) {
   .image-container {
     aspect-ratio: 4/3;
   }
-  
+
   .section-description {
     font-size: 1rem;
   }
-  
+
   .table {
     font-size: 0.9rem;
-    
-    th, td {
+
+    th,
+    td {
       padding: 0.75rem;
     }
   }
-  
+
   .reserva-btn {
     width: 100%;
     min-width: auto;
   }
-  
+
   .nav-tabs {
     .nav-link {
       padding: 0.5rem 1rem;
@@ -146,17 +155,15 @@ $titulos: #45d3b4;
   }
 }
 
-/* Loading States */
 .tab-pane {
   opacity: 0;
   transition: opacity 0.3s ease;
-  
+
   &.show {
     opacity: 1;
   }
 }
 
-/* Accessibility Focus States */
 :focus-visible {
   outline: 3px solid $accent-color;
   outline-offset: 2px;
