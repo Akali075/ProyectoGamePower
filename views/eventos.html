@@ -76,10 +76,10 @@
                             <p class="card-text">Participa en el torneo más emocionante de shooters. ¡Premios en
                                 efectivo!</p>
                             <p class="text-muted">Fecha: <time datetime="2024-12-15">15 de Diciembre</time></p>
-                            <a href="#" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
-                                title="Próximamente disponible">
+                            <button href="#" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="Próximamente disponible" onclick="mostrarAlerta()">
                                 Inscribirme
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -91,10 +91,10 @@
                             <p class="card-text">Disfruta con tus amigos de una noche de gaming sin interrupciones.
                             </p>
                             <p class="text-muted">Fecha: <time datetime="2024-12-20">20 de Diciembre</time></p>
-                            <a href="#" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
-                                title="Próximamente disponible">
+                            <button href="#" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="Próximamente disponible" onclick="mostrarAlerta()">
                                 Ver detalles
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -107,10 +107,10 @@
                             <p class="card-text">Demuestra tus habilidades en el FIFA y gana grandes premios.
                             </p>
                             <p class="text-muted">Fecha: <time datetime="2024-12-25">25 de Diciembre</time></p>
-                            <a href="#" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top"
-                                title="Próximamente disponible">
+                            <button class="btn btn-outline-primary" data-bs-toggle="tooltip" data-bs-placement="top"
+                                title="Próximamente disponible" onclick="mostrarAlerta()">
                                 Inscribirme
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -216,6 +216,19 @@
 <!-- Rutas locales JS de Bootstrap -->
 <script src="../js/bootstrap.bundle.min.js"></script>
 <script>
+    function mostrarAlerta() {
+        const alerta = document.createElement('div');
+        alerta.className = 'alert alert-danger fixed-bottom mb-3 me-3';
+        alerta.role = 'alert';
+        alerta.textContent = '¡Lo siento! No podemos mostrar más detalles en este momento.';
+
+        const container = document.getElementById('alertContainer');
+        container.appendChild(alerta);
+
+        setTimeout(() => {
+            alerta.remove();
+        }, 3000);
+    }
     document.addEventListener('DOMContentLoaded', function () {
         const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
         tooltipTriggerList.map(function (tooltipTriggerEl) {

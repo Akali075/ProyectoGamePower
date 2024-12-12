@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* multiple.scss - Estilos base y componentes principales */
 /* Variables */
 /* Mixins de accesibilidad */
@@ -52,7 +53,7 @@ body {
   padding: 0 1rem;
 }
 .navbar .navbar-brand {
-  font-size: 1.5rem;
+  font-size: 20px;
   font-weight: bold;
 }
 .navbar .navbar-brand:hover, .navbar .navbar-brand:focus {
@@ -112,4 +113,27 @@ body {
   .footer {
     text-align: center;
   }
+}
+
+/* Tipografía para el nombre de la página */
+.navbar-brand {
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
+  color: #00b4d8;
+}
+.navbar-brand:hover, .navbar-brand:focus {
+  color: #00b4d8;
+}
+
+/* Tipografía para header y footer */
+.footer h3,
+.navbar-content {
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+}
+
+.footer ul li a,
+.nav-link {
+  font-family: "Roboto Slab", serif;
+  font-weight: normal;
 }/*# sourceMappingURL=multiple.css.map */

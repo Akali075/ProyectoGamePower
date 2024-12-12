@@ -3,7 +3,8 @@
 /* Estilos para el main */
 main {
   /* Sección de próximos eventos */
-  /* Tabla de historial de eventos */
+  /* Variables */
+  /* Estilos para el main */
 }
 main section {
   margin-bottom: 3rem;
@@ -36,66 +37,65 @@ main section .card .card-body .btn {
 main section .card .card-body .btn:hover {
   background-color: #b47aff;
 }
-main table {
+main main {
+  /* Sección de noticias destacadas */
+  /* Botones accesibles */
+  /* Contrastes optimizados */
+  /* Focus de enlaces */
+  /* Estilos para la tabla responsiva */
+}
+main main section {
+  margin-bottom: 3rem;
+  /* Tabla de historial de eventos */
+}
+main main section h2 {
+  color: #00b4d8;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+main main section table {
   background-color: #1a1b26;
   color: white;
   border-radius: 0.5rem;
   overflow: hidden;
 }
-main table thead {
+main main section table thead {
   background-color: #2d3192;
 }
-main table thead th {
+main main section table thead th {
   color: #00b4d8;
   text-transform: uppercase;
 }
-main table tbody tr:hover {
+main main section table tbody tr:hover {
   background-color: #242635;
 }
-main table tbody tr td {
+main main section table tbody tr td {
   color: white;
 }
-
-/* Botones accesibles */
-.btn:focus {
+main main .btn:focus {
   outline: 2px solid #00b4d8;
   outline-offset: 2px;
 }
-
-/* Contrastes optimizados */
-body {
+main main body {
   color: #434663;
 }
-
-/* Focus de enlaces */
-a:focus {
+main main a:focus {
   text-decoration: underline;
   color: #00b4d8;
 }
-
-.tooltip.bs-tooltip-top .tooltip-inner {
-  background-color: #9747ff;
-  color: white;
-  font-weight: bold;
-  border: 1px solid #b47aff;
-}
-.tooltip .arrow::before {
-  border-top-color: #9747ff;
-}
-
-/* Estilos para la tabla responsiva */
 @media (max-width: 768px) {
-  .table-responsive {
+  main main .table-responsive {
     display: block;
     width: 100%;
     overflow-x: auto; /* Muestra la tabla horizontalmente en dispositivos más pequeños */
   }
-  .table th, .table td {
+  main main .table th,
+  main main .table td {
     display: block; /* Ajusta las celdas a un formato de bloque para facilitar la lectura */
     text-align: left;
     padding: 0.5rem;
   }
-  .table th::before {
+  main main .table th::before {
     content: attr(data-title);
     font-weight: bold;
     display: block;

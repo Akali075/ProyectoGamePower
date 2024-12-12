@@ -92,7 +92,7 @@ body {
   }
   
   .navbar-brand {
-    font-size: 1.5rem;
+    font-size: 20px;
     font-weight: bold;
     @include hover-focus {
       color: $color-accent;
@@ -152,4 +152,28 @@ body {
   @include responsive(mobile) {
     text-align: center;
   }
+}
+
+/* Tipografía para el nombre de la página */
+.navbar-brand {
+  font-family: 'Pacifico', cursive;
+  font-size: 20px;
+  color: $color-accent;
+
+  @include hover-focus {
+    color: $color-accent;
+  }
+}
+
+/* Tipografía para header y footer */
+.footer h3,
+.navbar-content {
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+}
+
+.footer ul li a,
+.nav-link {
+  font-family: 'Roboto Slab', serif;
+  font-weight: normal;
 }
