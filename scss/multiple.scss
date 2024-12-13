@@ -28,11 +28,17 @@ $color-text: #fff;
 /* Media queries */
 @mixin responsive($breakpoint) {
   @if $breakpoint == mobile {
-    @media (max-width: 767px) { @content; }
+    @media (max-width: 767px) {
+      @content;
+    }
   } @else if $breakpoint == tablet {
-    @media (min-width: 768px) and (max-width: 1023px) { @content; }
+    @media (min-width: 768px) and (max-width: 1023px) {
+      @content;
+    }
   } @else if $breakpoint == desktop {
-    @media (min-width: 1024px) { @content; }
+    @media (min-width: 1024px) {
+      @content;
+    }
   }
 }
 
@@ -62,20 +68,18 @@ body {
   }
 }
 
-/* Skip link */
 .skip-link {
+  background-color: #000; /* Fondo negro */
+  color: #fff; /* Texto blanco */
+  padding: 10px;
   position: absolute;
   top: -40px;
-  left: 0;
-  background: $color-accent;
-  color: $color-text;
-  padding: 8px;
+  left: 10px;
   z-index: 100;
   transition: top 0.3s;
-  
-  &:focus {
-    top: 0;
-  }
+}
+.skip-link:focus {
+  top: 10px;
 }
 
 /* Navbar */
@@ -83,14 +87,14 @@ body {
   background-color: rgba($color-secondary, 0.95);
   padding: 1rem;
   margin-bottom: 2rem;
-  
+
   .navbar-content {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
     padding: 0 1rem;
   }
-  
+
   .navbar-brand {
     font-size: 20px;
     font-weight: bold;
@@ -98,23 +102,23 @@ body {
       color: $color-accent;
     }
   }
-  
+
   .nav-link {
     @include focus-visible;
     padding: 0.5rem 1rem;
     margin: 0 0.25rem;
     border-radius: 4px;
-    
+
     @include hover-focus {
       background-color: rgba($color-accent, 0.2);
     }
   }
-  
+
   .navbar-toggler {
     @include focus-visible;
     padding: 0.5rem;
     border: none;
-    
+
     &-icon {
       filter: invert(1);
     }
@@ -126,19 +130,19 @@ body {
   background-color: $color-secondary;
   padding: 2rem 1rem;
   margin-top: auto;
-  
+
   h3 {
     color: $color-title;
     margin-bottom: 1rem;
   }
-  
+
   ul {
     list-style: none;
     padding: 0;
-    
+
     li {
       margin-bottom: 0.5rem;
-      
+
       a {
         color: $color-text;
         text-decoration: none;
@@ -148,7 +152,7 @@ body {
       }
     }
   }
-  
+
   @include responsive(mobile) {
     text-align: center;
   }
@@ -156,7 +160,7 @@ body {
 
 /* Tipografía para el nombre de la página */
 .navbar-brand {
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
   font-size: 20px;
   color: $color-accent;
 
@@ -168,12 +172,12 @@ body {
 /* Tipografía para header y footer */
 .footer h3,
 .navbar-content {
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   font-weight: bold;
 }
 
 .footer ul li a,
 .nav-link {
-  font-family: 'Roboto Slab', serif;
+  font-family: "Roboto Slab", serif;
   font-weight: normal;
 }
