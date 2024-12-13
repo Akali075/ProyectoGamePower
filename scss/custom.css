@@ -26,19 +26,19 @@ body {
   }
 }
 
-/* Skip link */
 .skip-link {
+  color: #003049; /* Contraste mejorado */
+  background-color: #00b4d8;
+  padding: 10px;
   position: absolute;
   top: -40px;
-  left: 0;
-  background: #00b4d8;
-  color: #fff;
-  padding: 8px;
+  left: 10px;
   z-index: 100;
   transition: top 0.3s;
 }
+
 .skip-link:focus {
-  top: 0;
+  top: 10px;
 }
 
 /* Navbar */
@@ -54,7 +54,7 @@ body {
   padding: 0 1rem;
 }
 .navbar .navbar-brand {
-  font-size: 1.5rem;
+  font-size: 20px;
   font-weight: bold;
 }
 .navbar .navbar-brand:hover, .navbar .navbar-brand:focus {
@@ -114,6 +114,29 @@ body {
   .footer {
     text-align: center;
   }
+}
+
+/* Tipografía para el nombre de la página */
+.navbar-brand {
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
+  color: #00b4d8;
+}
+.navbar-brand:hover, .navbar-brand:focus {
+  color: #00b4d8;
+}
+
+/* Tipografía para header y footer */
+.footer h3,
+.navbar-content {
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+}
+
+.footer ul li a,
+.nav-link {
+  font-family: "Roboto Slab", serif;
+  font-weight: normal;
 }
 
 /* Carrusel */
@@ -217,6 +240,48 @@ body {
 @media (min-width: 1024px) {
   .section-line {
     margin: 5rem 2rem;
+  }
+}
+
+/* Quiénes somos */
+.about-section {
+  padding: 3rem 1rem;
+  background-color: #171822;
+  border-radius: 8px;
+  text-align: center;
+}
+.about-section h2 {
+  color: #9747ff;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.about-section p {
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.about-section::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 5px;
+  background-color: #00b4d8;
+  margin: 1.5rem auto 0;
+  border-radius: 10px;
+}
+@media (max-width: 767px) {
+  .about-section {
+    padding: 2rem 1rem;
+  }
+  .about-section h2 {
+    font-size: 1.8rem;
+  }
+  .about-section p {
+    font-size: 1rem;
   }
 }
 

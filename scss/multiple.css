@@ -25,19 +25,29 @@ body {
   }
 }
 
-/* Skip link */
 .skip-link {
+  color: #003049; /* Contraste mejorado */
+  background-color: #00b4d8;
+  padding: 10px;
   position: absolute;
   top: -40px;
-  left: 0;
-  background: #00b4d8;
-  color: #fff;
-  padding: 8px;
+  left: 10px;
   z-index: 100;
   transition: top 0.3s;
 }
+
 .skip-link:focus {
-  top: 0;
+  top: 10px;
+}
+
+#btn-to-top {
+  z-index: 1000;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+#btn-to-top:hover {
+  opacity: 1;
 }
 
 /* Navbar */

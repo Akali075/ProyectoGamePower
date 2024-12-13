@@ -82,6 +82,16 @@ body {
   top: 10px;
 }
 
+#btn-to-top {
+  z-index: 1000;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+#btn-to-top:hover {
+  opacity: 1;
+}
+
+
 /* Navbar */
 .navbar {
   background-color: rgba($color-secondary, 0.95);
