@@ -1,14 +1,138 @@
-@charset "UTF-8";
 /* Variables */
-/* Estilos para el main */
-main {
-  /* Sección de próximos eventos */
-  /* Variables */
-  /* Estilos para el main */
+/* Mixins */
+/* Estilos base */
+body {
+  line-height: 1.6;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
+
+.gradient-bg {
+  background: linear-gradient(to bottom, #9747ff, #2d3192, #00b4d8);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  margin: 0;
+  padding: 1rem;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .gradient-bg {
+    padding: 2rem;
+  }
+}
+
+/* Componentes de accesibilidad */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  z-index: 100;
+  padding: 10px;
+  color: #003049;
+  background-color: #00b4d8;
+  transition: top 0.3s;
+}
+.skip-link:focus {
+  top: 10px;
+}
+
+#btn-to-top {
+  z-index: 1000;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+#btn-to-top:hover {
+  opacity: 1;
+}
+
+/* Navbar */
+.navbar {
+  background-color: rgba(45, 49, 146, 0.95);
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.navbar-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+}
+.navbar-brand {
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
+  color: #00b4d8;
+}
+.navbar-brand:hover, .navbar-brand:focus {
+  color: #00b4d8;
+}
+.navbar-toggler {
+  padding: 0.5rem;
+  border: none;
+}
+.navbar-toggler:focus-visible {
+  outline: 3px solid #00b4d8;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+.navbar .nav-link {
+  font-family: "Roboto Slab", serif;
+  padding: 0.5rem 1rem;
+  margin: 0 0.25rem;
+  border-radius: 4px;
+}
+.navbar .nav-link:focus-visible {
+  outline: 3px solid #00b4d8;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+.navbar .nav-link:hover, .navbar .nav-link:focus {
+  background-color: rgba(0, 180, 216, 0.2);
+}
+
+/* Footer */
+.footer {
+  background-color: #2d3192;
+  padding: 2rem 1rem;
+  margin-top: auto;
+}
+.footer h3 {
+  color: #45d3b4;
+  margin-bottom: 1rem;
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+}
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+.footer ul li {
+  margin-bottom: 0.5rem;
+}
+.footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Roboto Slab", serif;
+}
+.footer ul li a:hover, .footer ul li a:focus {
+  color: #00b4d8;
+}
+@media (max-width: 767px) {
+  .footer {
+    text-align: center;
+  }
+}
+
+/* Estilos para el main */
 main section {
   margin-bottom: 3rem;
   /* Cards de eventos */
+  /* Tabla de historial de eventos */
 }
 main section h2 {
   color: #45d3b4;
@@ -31,71 +155,56 @@ main section .card .card-body p {
 }
 main section .card .card-body .btn {
   background-color: #9747ff;
-  color: white;
+  color: #fff;
   border: none;
 }
 main section .card .card-body .btn:hover {
   background-color: #b47aff;
 }
-main main {
-  /* Sección de noticias destacadas */
-  /* Botones accesibles */
-  /* Contrastes optimizados */
-  /* Focus de enlaces */
-  /* Estilos para la tabla responsiva */
-}
-main main section {
-  margin-bottom: 3rem;
-  /* Tabla de historial de eventos */
-}
-main main section h2 {
-  color: #00b4d8;
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-main main section table {
+main section table {
   background-color: #1a1b26;
-  color: white;
+  color: #fff;
   border-radius: 0.5rem;
   overflow: hidden;
 }
-main main section table thead {
+main section table thead {
   background-color: #2d3192;
 }
-main main section table thead th {
+main section table thead th {
   color: #00b4d8;
   text-transform: uppercase;
 }
-main main section table tbody tr:hover {
+main section table tbody tr:hover {
   background-color: #242635;
 }
-main main section table tbody tr td {
+main section table tbody tr td {
   color: white;
 }
-main main .btn:focus {
+
+/* Elementos interactivos */
+.btn:focus {
   outline: 2px solid #00b4d8;
   outline-offset: 2px;
 }
-main main body {
-  color: #434663;
-}
-main main a:focus {
+
+a:focus {
   text-decoration: underline;
   color: #00b4d8;
 }
+
+/* Media queries */
 @media (max-width: 768px) {
-  main main .table-responsive {
+  .table-responsive {
     display: block;
     width: 100%;
-    overflow-x: auto; /* Muestra la tabla horizontalmente en dispositivos más pequeños */
+    overflow-x: auto;
   }
-  main main .table th,
-  main main .table td {
-    display: block; /* Ajusta las celdas a un formato de bloque para facilitar la lectura */
+  .table th, .table td {
+    display: block;
     text-align: left;
     padding: 0.5rem;
   }
-  main main .table th::before {
+  .table th::before {
     content: attr(data-title);
     font-weight: bold;
     display: block;

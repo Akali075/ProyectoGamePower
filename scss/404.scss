@@ -1,26 +1,22 @@
-/* Variables */
-$color-primary: #9747ff;
-$color-secondary: #2d3192;
-$color-accent: #00b4d8;
-$color-neutral: #1a1b26;
-$color-title: #45d3b4;
-$color-text: #fff;
+// Importar variables
+@import 'multiple';
+
 /* Error Page */
 .error-page {
   text-align: center;
   padding: 4rem 1rem;
-}
 
-.error-title {
-  font-size: 3rem;
-  color: $color-title;
-  margin-bottom: 1rem;
-}
+  &-title {
+    font-size: 3rem;
+    color: $color-title;
+    margin-bottom: 1rem;
+  }
 
-.error-message {
-  font-size: 1.2rem;
-  color: $color-text;
-  margin-bottom: 2rem;
+  &-message {
+    font-size: 1.2rem;
+    color: $color-text;
+    margin-bottom: 2rem;
+  }
 }
 
 .btn-primary {
@@ -31,8 +27,8 @@ $color-text: #fff;
   font-weight: bold;
   border-radius: 5px;
   transition: background-color 0.3s ease;
-}
 
-.btn-primary:hover {
-  background-color: lighten($color-accent, 10%);
+  &:hover {
+    background-color: lighten($color-accent, 10%);
+  }
 }

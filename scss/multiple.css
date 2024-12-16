@@ -1,8 +1,5 @@
-@charset "UTF-8";
-/* multiple.scss - Estilos base y componentes principales */
 /* Variables */
-/* Mixins de accesibilidad */
-/* Media queries */
+/* Mixins */
 /* Estilos base */
 body {
   line-height: 1.6;
@@ -25,17 +22,17 @@ body {
   }
 }
 
+/* Componentes de accesibilidad */
 .skip-link {
-  color: #003049; /* Contraste mejorado */
-  background-color: #00b4d8;
-  padding: 10px;
   position: absolute;
   top: -40px;
   left: 10px;
   z-index: 100;
+  padding: 10px;
+  color: #003049;
+  background-color: #00b4d8;
   transition: top 0.3s;
 }
-
 .skip-link:focus {
   top: 10px;
 }
@@ -45,7 +42,6 @@ body {
   opacity: 0.8;
   transition: opacity 0.3s ease;
 }
-
 #btn-to-top:hover {
   opacity: 1;
 }
@@ -56,20 +52,36 @@ body {
   padding: 1rem;
   margin-bottom: 2rem;
 }
-.navbar .navbar-content {
+.navbar-content {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   padding: 0 1rem;
-}
-.navbar .navbar-brand {
-  font-size: 20px;
+  font-family: "Roboto Slab", serif;
   font-weight: bold;
 }
-.navbar .navbar-brand:hover, .navbar .navbar-brand:focus {
+.navbar-brand {
+  font-family: "Pacifico", cursive;
+  font-size: 20px;
   color: #00b4d8;
 }
+.navbar-brand:hover, .navbar-brand:focus {
+  color: #00b4d8;
+}
+.navbar-toggler {
+  padding: 0.5rem;
+  border: none;
+}
+.navbar-toggler:focus-visible {
+  outline: 3px solid #00b4d8;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+.navbar-toggler-icon {
+  filter: invert(1);
+}
 .navbar .nav-link {
+  font-family: "Roboto Slab", serif;
   padding: 0.5rem 1rem;
   margin: 0 0.25rem;
   border-radius: 4px;
@@ -82,18 +94,6 @@ body {
 .navbar .nav-link:hover, .navbar .nav-link:focus {
   background-color: rgba(0, 180, 216, 0.2);
 }
-.navbar .navbar-toggler {
-  padding: 0.5rem;
-  border: none;
-}
-.navbar .navbar-toggler:focus-visible {
-  outline: 3px solid #00b4d8;
-  outline-offset: 2px;
-  border-radius: 4px;
-}
-.navbar .navbar-toggler-icon {
-  filter: invert(1);
-}
 
 /* Footer */
 .footer {
@@ -104,6 +104,8 @@ body {
 .footer h3 {
   color: #45d3b4;
   margin-bottom: 1rem;
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
 }
 .footer ul {
   list-style: none;
@@ -115,6 +117,7 @@ body {
 .footer ul li a {
   color: #fff;
   text-decoration: none;
+  font-family: "Roboto Slab", serif;
 }
 .footer ul li a:hover, .footer ul li a:focus {
   color: #00b4d8;
@@ -123,27 +126,4 @@ body {
   .footer {
     text-align: center;
   }
-}
-
-/* Tipografía para el nombre de la página */
-.navbar-brand {
-  font-family: "Pacifico", cursive;
-  font-size: 20px;
-  color: #00b4d8;
-}
-.navbar-brand:hover, .navbar-brand:focus {
-  color: #00b4d8;
-}
-
-/* Tipografía para header y footer */
-.footer h3,
-.navbar-content {
-  font-family: "Roboto Slab", serif;
-  font-weight: bold;
-}
-
-.footer ul li a,
-.nav-link {
-  font-family: "Roboto Slab", serif;
-  font-weight: normal;
 }/*# sourceMappingURL=multiple.css.map */

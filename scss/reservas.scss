@@ -1,19 +1,14 @@
-// Variables de color
-$background-dark: #333;
-$primary-color: #1e90ff;
-$primary-hover: #63b8ff;
-$text-color-light: #fff;
-$text-placeholder: #bbb;
-$error-color: #ff4d4d;
+// Importar variables
+@import 'multiple';
 
-// Reservas
+// Sección de Reservas
 .reservation-section {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 100px); 
+  min-height: calc(100vh - 100px);
   background: url("../images/reservasblur.jpg") no-repeat center center/cover;
-  margin-bottom: 40px; 
+  margin-bottom: 40px;
 }
 
 .reservation-form {
@@ -21,39 +16,22 @@ $error-color: #ff4d4d;
   border-radius: 20px;
   padding: 30px 40px;
   text-align: center;
-  color: $text-color-light;
+  color: $color-text;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 
   h2 {
     margin-bottom: 20px;
   }
 
-  .form-control {
-    background-color: $background-dark;
-    color: $text-color-light;
-    border: none;
-    margin-bottom: 15px;
-    border-radius: 5px;
-
-    &::placeholder {
-      color: $text-placeholder;
-    }
-
-    &:focus {
-      outline: none;
-      box-shadow: 0 0 5px $primary-color;
-    }
-  }
-
   .btn-reserve {
-    background-color: $primary-color;
-    color: $text-color-light;
+    background-color: $color-primary;
+    color: $color-text;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
 
     &:hover {
-      background-color: $primary-hover;
+      opacity: 0.9;
     }
   }
 
@@ -66,15 +44,21 @@ $error-color: #ff4d4d;
   }
 }
 
-// General
+// Componentes de formulario
 .form-control {
-  background-color: $background-dark;
+  background-color: $color-neutral;
+  color: $color-text;
   border: none;
-  color: $text-color-light;
   margin-bottom: 15px;
   padding: 10px;
+  border-radius: 5px;
 
   &::placeholder {
-    color: $text-placeholder;
+    color: #bbb;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 5px $color-primary;
   }
 }

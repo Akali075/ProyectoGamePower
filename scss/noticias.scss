@@ -1,18 +1,13 @@
-/* Variables */
-$primary-color: #9747ff; // Púrpura vibrante
-$secondary-color: #2d3192; // Azul profundo
-$accent-color: #00b4d8; // Azul cian brillante
-$neutral: #1a1b26; // Gris oscuro
+// Importar variables
+@import 'multiple';
 
 /* Estilos para el main */
 main {
-
-  /* Sección de noticias destacadas */
   section {
     margin-bottom: 3rem;
 
     h2 {
-      color: $accent-color;
+      color: $color-accent;
       text-align: center;
       margin-bottom: 1.5rem;
     }
@@ -25,39 +20,29 @@ main {
       margin-bottom: 20px;
       height: 100%;
 
-      .card-img-top {
+      &-img-top {
         border-radius: 0.5rem 0.5rem 0 0;
         height: 200px;
         object-fit: cover;
       }
 
-      .card-body {
+      &-body {
         h5 {
-          color: $accent-color;
+          color: $color-accent;
         }
 
         p {
           color: rgb(0, 0, 0);
         }
 
-        .btn {
-          background-color: $primary-color;
-          color: white;
+        .btn, .btn-outline-primary {
+          background-color: $color-primary;
+          color: $color-text;
           border: none;
 
           &:hover {
-            background-color: lighten($primary-color, 10%);
-          }
-        }
-
-        .btn-outline-primary {
-            background-color: $primary-color;
-            color: white;
-            border: none;
-
-          &:hover {
-            background-color: lighten($primary-color, 10%);
-            color: white;
+            background-color: lighten($color-primary, 10%);
+            color: $color-text;
           }
         }
       }
