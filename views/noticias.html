@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../scss/multiple.css" />
     <link rel="stylesheet" href="../scss/noticias.css">
@@ -114,6 +115,142 @@
                     </div>
                 </div>
             </section>
+            <section>
+                <h2 class="text-center my-4 fw-bold">Últimos Videos</h2>
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <video class="card-img-top" controls aria-describedby="videoDescription">
+                            <source src="../videos/VideoPaginaWeb.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de videos.
+                        </video>
+                        <div class="card-body">
+                            <h5 class="card-title">Cómo Subir tu Página Web a Infinity Free</h5>
+                            <p class="card-text">Aprende paso a paso cómo subir tu página web a un hosting gratuito como
+                                Infinity Free. Ideal para principiantes y proyectos pequeños.</p>
+                            <p class="text-muted">Fecha: 29 de Enero</p>
+                            <!-- Botón que activa el modal -->
+                            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#videoModal"
+                                title="Ver el video completo">
+                                Ver Video Completo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="videoModalLabel">Cómo Subir tu Página Web a Infinity Free
+                                </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Video -->
+                                <div class="ratio ratio-16x9 mb-3">
+                                    <video id="videoPlayer" controls aria-describedby="videoDescription">
+                                        <source src="../videos/VideoPaginaWeb.mp4" type="video/mp4">
+                                        Tu navegador no soporta la reproducción de videos.
+                                    </video>
+                                </div>
+                                <!-- Texto alternativo accesible -->
+                                <p id="videoDescription" class="visually-hidden">
+                                    Muy buenas chicos, hoy tenemos aquí un video tutorial sobre cómo subir o alojar una
+                                    web en un hosting gratuito o no gratuito, pero bueno, en mi caso lo voy a hacer
+                                    sobre Infinity Hosting. Y bueno, utilizaremos, tenemos una serie de requisitos para
+                                    realizar esto. Necesitamos una cuenta de Infinity Free, un cliente FTP, en mi caso
+                                    voy a usar WinSCP, ya que FileZilla, en mi caso, lo veo un poco más inseguro que
+                                    WinSCP, ¿vale? Y nuestra página web lista, en mi caso es un representante de G-Hat,
+                                    ¿vale? Que ya lo tengo copiado en mi escritorio, que es una página web que tenía
+                                    previamente en otro trabajo, así que voy a utilizarla en este caso, ¿vale? Para
+                                    subirla al contenido de este alojamiento Tener una cuenta de Infinity Free, tener un
+                                    cliente FTP, ¿vale? Y tener una página web lista para subir. Ya está, con esas cosas
+                                    no necesitamos absolutamente nada más, ¿vale? Así que en mi caso voy a acceder,
+                                    ¿vale? Porque ya estoy registrada, ¿vale? Y ahora volvemos. ¡Gracias! bueno una vez
+                                    logueados para crear una cuenta gratuita en infinity hosting, infinity free,
+                                    disculpadme tengo ahí un cacao mental verificamos que somos humanos una vez
+                                    verificado nos pedirá que dejamos un subdominio para nuestra web y una extensión de
+                                    dominio en mi caso voy a dejar rf.goot y ponemos en power y le damos a consultar
+                                    disponibilidad en este caso está libre entonces ya nos salta la información
+                                    adicional que luego tenemos aquí una breve descripción para identificar nuestra
+                                    cuenta o nuestra página web esto podéis editarlo o poner lo que queráis vale esto es
+                                    si queremos usar un nombre usuario de la cuenta o que se genera automático en mi
+                                    caso yo no voy a poner nada que se genera automáticamente y luego la contraseña
+                                    única de la cuenta para poder acceder al ftp en mi caso dejo tal cual tal como está
+                                    luego nos pedirá un consentimiento de correo electrónico vale en caso de que falle
+                                    algo de la página web os dirán o mandarán un email y se pondrán en contacto en mi
+                                    caso pongo yo apruebo y ya está y creamos nuestra cuenta vale cuenta está creada
+                                    perfecto todo está creado vale lo único que están haciendo es ahora configurar
+                                    nuestra cuenta vale la cuenta puede tardar unos minutos en configurarse lo que sea
+                                    una vez que esté lista vuelvo vale así que ahora nos volvemos a ver bueno ya estamos
+                                    por aquí vale ya se ha creado nuestro panel de control digamos o zona de control
+                                    vale donde podemos administrar los dominios podemos ver nuestro usuario la
+                                    contraseña el estado si activo no se activa la página web y tal ahora teniendo esto
+                                    vale lo primero que vamos a hacer es subir nuestros archivos vale que en este caso
+                                    nos dirigimos al gestor de archivos vale y tenemos esta opción de subirla por aquí
+                                    en mi caso con file manager no me llevo muy bien vale ya he trabajado con
+                                    interiormente así que vamos a irnos a nuestro cliente ftp vale nos vamos a detalles
+                                    de ftp y aquí simplemente lo que tendremos que hacer será copiar primero el nombre
+                                    de nuestro host ftp nos vamos a nuestro cliente en caso no te seleccione el
+                                    protocolo ftp lo seleccionáis en ip del servidor copiáis esto aquí hemos copiado
+                                    ahora mismo vale luego el nombre de usuario ftp copiáis lo pone aquí y os dirigís a
+                                    usuario y lo copiáis vale luego el puerto en este caso casi siempre está colocado
+                                    vale así que yo lo dejo tal cual y luego la contraseña que os habrá generado una
+                                    contraseña aleatoria vale en mi caso la pizelo y listo podemos meternos en modo
+                                    anónimo o no modo anónimo podemos guardar el sitio y conectarnos en mi caso le voy a
+                                    dar a guardar vale para próximamente no tener que estar metiéndome de más aceptamos
+                                    y conectamos nos conectamos a nuestro servidor ftp vale Una vez conectados ya a
+                                    nuestro servidor FTP, nos tendremos que dirigir a esta carpeta HT2 donde accederemos
+                                    y aquí subiremos nuestra carpeta de nuestra página web. Una vez conectados ya a
+                                    nuestro servidor FTP, nos tendremos que dirigir a esta carpeta HT2 donde accederemos
+                                    y aquí subiremos nuestra carpeta de nuestra página web. Obviamente siempre tiene que
+                                    haber un index en nuestra web, así que estos dos archivitos si queremos los
+                                    eliminamos y vamos a buscar nuestra carpeta. En mi caso yo me tengo que dirigir a mi
+                                    escritorio y dentro de mi escritorio tengo aquí proyecto página web. Me meto y todos
+                                    estos archivos los seleccionáis y los traspasáis en vuestro caso lo que tengáis que
+                                    pasar. Esto va a tardar un rato así que ahora volvemos. Listo, una vez todo subido y
+                                    teniendo nuestro index.html ya preparado y todo, en mi caso voy a borrar aquí
+                                    Gracias. 2 cositas que no deben de estar, vale *3 Listo y ahora nos dirigimos a
+                                    nuestra web, es nuestro panel de control, vamos a home y aquí vale nos saldrá una
+                                    website ip, vale, pero puede ocurrir, vale, como en mi caso que si yo coloco la ip,
+                                    vale, o cualquier otra cosa por aquí, vale, no me redirige a la página en absoluto,
+                                    entonces hay que esperar a que un poquito el dominio o los subdominios se activen,
+                                    vale, y otro inciso, vale, es que aunque te pongas de estar tu activado cuando
+                                    quieres acceder al ftp, puede ser que no os entre a la primera al ftp, vale, por
+                                    cuestiones de del hosting, vale, así que en mi caso yo tuve que esperar dos días
+                                    para poder conectarme al ftp prácticamente, o un día y medio, así que por si acaso
+                                    lo comento para el que le pase, vale así que ahora simplemente deberíamos de
+                                    esperar, vale, o mejor dicho copiar nuestro dominio y averiguar si nuestra página
+                                    web está funcionando, en mi caso ya está funcionando perfectamente, vale, como veis
+                                    tengo por aquí todas las cosas así que ya está subido a nuestro hosting,
+                                    prácticamente es algo sencillo no hay tanto problema, está funcionando a la
+                                    perfección como veis así que poquito más puedo comentar, vale, el inciso lo
+                                    explicaré un poquito mejor por aquí me despido, ya sabéis como subir a la página
+                                    Infinity Free, así que chao.
+                                </p>
+                                <!-- Controles personalizados -->
+                                <div class="text-center">
+                                    <button class="btn btn-success" onclick="playVideo()">Play</button>
+                                    <button class="btn btn-warning" onclick="pauseVideo()">Pause</button>
+                                    <button class="btn btn-danger" onclick="stopVideo()">Stop</button>
+                                    <button class="btn btn-secondary" onclick="volumeUp()">Vol +</button>
+                                    <button class="btn btn-secondary" onclick="volumeDown()">Vol -</button>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <p class="text-muted">Sígueme en mis redes sociales:</p>
+                                <div class="d-flex justify-content-center gap-3">
+                                    <a href="https://www.youtube.com/@HearTTitan07" class="btn btn-dark"
+                                        target="_blank">YouTube</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <!-- Listado de Artículos -->
             <section class="my-5">
@@ -207,9 +344,10 @@
                 </div>
             </div>
         </footer>
-        <a href="#main-content" id="btn-to-top" class="btn btn-primary position-fixed" style="bottom: 20px; right: 20px; display: none;" aria-label="Ir hacia arriba">
+        <a href="#main-content" id="btn-to-top" class="btn btn-primary position-fixed"
+            style="bottom: 20px; right: 20px; display: none;" aria-label="Ir hacia arriba">
             <i class="bi bi-arrow-up"></i>
-        </a>    
+        </a>
     </body>
     <!-- Scripts de Bootstrap -->
     <script src="../js/bootstrap.bundle.min.js"></script>
@@ -242,6 +380,28 @@
                 btnToTop.style.display = 'none';
             }
         });
+        const video = document.getElementById('videoPlayer');
+
+        function playVideo() {
+            video.play();
+        }
+
+        function pauseVideo() {
+            video.pause();
+        }
+
+        function stopVideo() {
+            video.pause();
+            video.currentTime = 0;
+        }
+
+        function volumeUp() {
+            if (video.volume < 1) video.volume = Math.min(video.volume + 0.1, 1);
+        }
+
+        function volumeDown() {
+            if (video.volume > 0) video.volume = Math.max(video.volume - 0.1, 0);
+        }
     </script>
 
 </html>
